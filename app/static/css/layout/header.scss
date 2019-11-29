@@ -1,0 +1,124 @@
+.header {
+  height: 100vh;
+  width: 150px;
+
+  
+  background-color: #fff;
+  position: fixed;
+  
+ left: 0;
+  top: 0;
+  z-index: 99999;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 2px 19px 0 rgba(0,0,0,.06);
+  &__inner {
+
+    padding: 35px 42px;
+    display: flex;
+
+    height: 100%;
+
+  }
+
+  &__logo {
+    height: 66px;
+    width: 100%;
+
+    .logo {
+      position: absolute;
+      z-index: 3;
+    }
+  }
+
+  &__social {
+    &-item {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+
+      &:hover {
+        svg {
+          fill: #C8102E;
+          transition: fill .3s .02s ease;
+        }
+      }
+
+    }
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    max-width: 100%;
+  }
+ &-right {
+     display: none;
+ }
+  &-open {
+      .header {
+          &-right {
+            display: flex;
+        }
+      }
+    width: 452px;
+    transition: all 0.3s ease-out;
+  
+  }
+
+  &__nav {
+    margin-top: 130px;
+    padding-left: 80px;
+    list-style: none;
+
+    &-item {
+      @include helveticaNeueCur-roman;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #222222;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+    }
+    .submenu {
+        display: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 33px;
+        &__item {
+          margin-bottom: 10px;
+         @include helveticaNeueCur-roman;
+         font-size: 14px;
+         line-height: 18px;
+         letter-spacing: 0.01em;
+         color: #888888;
+          &:last-child {
+              margin-bottom: 0;
+          }
+        }
+        &__link {
+            display: inline-block;
+        }
+    }
+    .submenu-wrap {
+        cursor: pointer;
+    }
+  }
+}
