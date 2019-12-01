@@ -201,6 +201,26 @@
                         </div>
                         <a href="" class="btn primary-btn result-btn">Что стало с Женей <br>через 30лет?</a>
                     </div>
+                    <div class="client-advice">
+                        <div class="client">
+                            <div class="client__img">
+                                <img src="../static/images/Eugene_62.png" alt="" class="img">
+                                
+                                
+                            </div>
+                            <div class="client__info">
+                                      <div class="client__info-img">
+                                    <img src="../static/images/opinion.png" alt="" class="img">
+                                </div>
+                                <div class="client__info-text">
+                                    <p class="text">Женя,62 года</p>
+                                     <p class="subtext">свои зубы</p>
+                                </div>
+                                </div>
+                           <a href="#" class="btn primary-btn back-work-btn" >Как это получилось?</a>
+                        </div>
+                       
+                    </div>
                 </div>
             </div>
         </section>
@@ -235,25 +255,10 @@
         </section>
 
 
-        <div class="bottom-menu">
-
-            <div class="counter"><span class="active-section">1</span><span class="amount-section">/4</span></div>
-            <nav class="nav" id='menu'>
-
-                <a href="#main" class="nav__link active ">триомед</a>
-
-                <a href="#about" class="nav__link">о клубе</a>
-                <a href="#work" class="nav__link">как работает
-                    клуб</a>
-                <a href="#reason" class="nav__link">наши фишки</a>
-
-
-
-            </nav>
-
-        </div>
+{{> components/bottom-menu}}
+     
     </div>
 </div>
 
 
-{{> layout/footer}}
+{{> layout/footer class='footer'}}

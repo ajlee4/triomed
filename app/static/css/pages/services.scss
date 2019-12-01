@@ -1,0 +1,74 @@
+
+    .section-services {
+          .section {
+              &__inner {
+                  padding-top: 90px;
+                  padding-right: 26px;
+              }
+              &__title {
+                @include helveticaNeueCur-medium;
+                font-size: 32px;
+                line-height: 37px;
+                color: #222222;
+                margin-bottom: 20px;
+              }
+          }
+          .services {
+              &__col {
+                  padding-left: 50px;
+                  &-title {
+                      font-size: 20px;
+                      line-height: 24px;
+                      letter-spacing: 0.01em;
+                      color: #222222;
+                      @include helveticaNeueCur-medium;
+                      position: relative;
+                          margin-bottom: 10px;
+                          display: inline-block;
+                          &:hover {
+                              color: #C8102E;
+                          }
+                         svg {
+                            position: absolute;
+                            top: -5px;
+                            right: 100%;
+                            margin-right: 10px;
+                         
+                            display: inline-block;
+                         }
+                  }
+                  &-info {
+                    
+                      p {
+                          font-size: 13px;
+                          line-height: 17px;
+                          color: #000000;
+                          @include helveticaNeueCur-roman;
+                          margin-bottom: 5px;
+                          &:last-child {
+                              margin-bottom: 0;
+                          }
+                      }
+                  }
+              }
+              &__row {
+                  margin-bottom: 30px;
+                  justify-content: space-between;
+                  &:last-child {
+                      margin-bottom: 0;
+                  }
+              }
+          }
+        
+    }
+.services {
+    .bottom-menu {
+        .nav {
+            &__link {
+                &:before {
+                  display: none;
+                }
+            }
+        }
+    }
+}

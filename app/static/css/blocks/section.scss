@@ -1,4 +1,5 @@
 .section {
+ 
   &__inner {
     padding-left: 64px;
   }
@@ -13,14 +14,16 @@
         position: static;
         opacity: 1;
         visibility: visible;
+
         &.animated {
           animation: fadeInRight 1s;
         }
+
         &.hidden {
-         position: absolute;
-         opacity: 0;
-         visibility: hidden;
-        
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+
         }
 
         padding-top: 90px;
@@ -49,21 +52,22 @@
 
       &__subinfo {
         padding-top: 90px;
-         
-      
+
+
         visibility: hidden;
         opacity: 0;
         position: absolute;
-        
-      
-        &.visible {
-         
-     visibility:  visible;
-     position: static;
-     opacity: 1;
-    animation: fadeInLeft 1s;
 
-     }
+
+        &.visible {
+
+          visibility: visible;
+          position: static;
+          opacity: 1;
+          animation: fadeInLeft 1s;
+
+        }
+
         .section {
           &__subtitle {
             font-size: 22px;
@@ -86,14 +90,15 @@
               padding-left: 30px;
             }
           }
-         &-action {
-          max-width: 835px;
-           display: flex;
-           justify-content: flex-end;
-         }
+
+          &-action {
+            max-width: 835px;
+            display: flex;
+            justify-content: flex-end;
+          }
         }
 
-        
+
       }
     }
 
@@ -150,11 +155,13 @@
         z-index: 9999;
         visibility: hidden;
         opacity: 0;
-       &.visible {
-         visibility: visible;
-         opacity: 1;
-         transition: 0.5s;
-       }
+
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          transition: 0.5s;
+        }
+
         .bonus {
           &-list {
             padding: 20px 15px;
@@ -210,6 +217,9 @@
 
     .work {
       &-scheme {
+        &.animated {
+          animation: fadeInRight 1s;
+        }
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -217,6 +227,13 @@
 
         height: 100%;
         position: relative;
+        opacity: 1;
+
+        &.hidden {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+        }
 
         .client {
           margin-right: 175px;
@@ -384,6 +401,65 @@
           }
         }
       }
+    }
+
+    .client-advice {
+
+      display: flex;
+
+      justify-content: center;
+
+      .client {
+        margin-top: 70px;
+
+        max-height: 240px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+
+        &__info-img {
+          position: relative;
+          left: -30px;
+          top: -20px;
+
+        }
+
+        &__info-text {
+          position: relative;
+         
+          top: -20px;
+          .text {
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 0.01em;
+            color: #222222;
+            @include helveticaNeueCur-medium;
+            margin-bottom: 5px;
+          }
+
+          .subtext {
+            font-size: 14px;
+            line-height: 18px;
+            color: #222222;
+            @include helveticaNeueCur-light;
+            letter-spacing: 0.01em;
+          }
+
+        }
+
+      }
+
+      &.visible {
+        opacity: 1;
+        visibility: visible;
+        animation: fadeInLeft 1s;
+        position: static;
+      }
+
+      visibility: hidden;
+      position: absolute;
+      opacity: 0;
+
     }
 
     .gift {

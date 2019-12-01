@@ -129,10 +129,22 @@ margin-left: 80px;
 }
 .result-btn {
   position: absolute;
-  bottom: 140px;
+  bottom: 160px;
   right: 100px;
  font-size: 13px;
  line-height: 17px;
  @include helveticaNeueCur-roman;
+ padding-top: 5px;
+ padding-bottom: 5px;
 
+}
+.back-work-btn {
+  display: block;
+  position: absolute;
+  width: 278px;
+  top: 100%;
+  margin-top: 80px;
+
+  left: 50%;
+  margin-left: -139px;
 }
