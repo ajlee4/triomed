@@ -3,26 +3,42 @@
 $(function() {
   var footer = $('.footer'),
     aboutH = $('[data-section-name = "about"]').innerHeight(),
+    priceH= $('[data-section-name = "diagnostic-price"]').innerHeight(),
+    nav = $('.bottom-menu'),
     scrollOffset = $(window).scrollTop();
     if (!aboutH)  {
         return
+    } else {
+        footerScroll(scrollOffset);
+        $(window).on('scroll', function() {
+            scrollOffset = $(this).scrollTop();
+            footerScroll(scrollOffset,aboutH);          
+          });
     }
-  checkScroll(scrollOffset);
-  $(window).on('scroll', function() {
-    scrollOffset = $(this).scrollTop();
-    checkScroll(scrollOffset);
- 
-    
-  });
+   
+  
 
-  function checkScroll(scrollOffset) {
-    if (scrollOffset >= aboutH - 30) {
+
+  function footerScroll(scrollOffset,sectionH) {
+    if (scrollOffset >= sectionH - 30) {
       footer.addClass('footer-wrap');
     } else {
       footer.removeClass('footer-wrap');
     }
   }
+  
 });
+
+
+  $(window).scroll(function () {
+    var height = $(window).scrollTop();
+    if (height > 50) {
+  $('.bottom-menu').removeClass('menu-gray');
+       
+    } else {
+      $('.bottom-menu').addClass('menu-gray');
+    }
+  });
 
 $(function() {
   $.scrollify({

@@ -129,8 +129,8 @@ margin-left: 80px;
 }
 .result-btn {
   position: absolute;
-  bottom: 160px;
-  right: 100px;
+  top: 410px;
+  right: 115px;
  font-size: 13px;
  line-height: 17px;
  @include helveticaNeueCur-roman;
@@ -147,4 +147,10 @@ margin-left: 80px;
 
   left: 50%;
   margin-left: -139px;
+}
+.details-price__btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
 }
