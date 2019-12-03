@@ -29,36 +29,41 @@
       flex-direction: column;
       justify-content: space-between;
       cursor: pointer;
+
       &:hover {
-         .primary-btn {
-             visibility: visible;
-             transition: 0s;
-         }
+        .primary-btn {
+          visibility: visible;
+          transition: 0s;
+        }
       }
 
       &:hover {
         img {
           filter: none;
-          transition: 0.3s;
+
         }
 
       }
 
       &-img {
         position: relative;
+        display: inline-block;
+        height: 235px;
+        max-width: 100%;
 
         img {
-          filter: gray;
-          filter: grayscale(100%);
-          transition: 0.3s;
+
+          max-width: 232px;
+
         }
       }
 
       &-info {
-         height: 240px;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         .name {
           font-size: 20px;
           line-height: 24px;
@@ -95,15 +100,16 @@
             }
           }
         }
+
         .primary-btn {
-         visibility: hidden;
-         transition: 0s;
-         width: 70%;
-         padding-top: 10px;
-         padding-bottom: 10px;
+          visibility: hidden;
+          transition: 0s;
+          width: 70%;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
       }
-     
+
     }
   }
 
@@ -139,31 +145,131 @@
 
 
 .slider-portfolio {
-  
-    .slider {
-        &__item {
-            display: flex;
-         .text {
-             font-size: 16px;
-             line-height: 24px;
-             @include helveticaNeueCur-roman;
-             color: #222222;
-             margin-bottom: 5px;
-         }
-          &-img {
-              img {
-                filter: gray;
-                filter: grayscale(100%);
-                cursor: pointer;
-                transition: 0.3s;
-                max-width: 100%;
-              }
-              &:hover {
-                img {
-                    filter: none;
-                }
-               }
+
+  .slider {
+    &__item {
+      display: flex;
+
+      .text {
+        font-size: 16px;
+        line-height: 24px;
+        @include helveticaNeueCur-roman;
+        color: #222222;
+        margin-bottom: 5px;
+      }
+
+      &-img {
+        img {
+
+          cursor: pointer;
+          transition: 0.3s;
+          max-width: 100%;
+        }
+
+        &:hover {
+          img {
+            filter: none;
           }
         }
+      }
     }
+  }
+}
+
+
+// SERTIFICAT SLIDER
+
+.sertificat-slider {
+
+
+  .slider {
+    &__inner {
+      display: flex;
+      width: 200px;
+    }
+
+    &__item {
+      width: 200px;
+    }
+
+    &-arrow {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+
+
+
+    }
+  }
+
+  .prev,
+  .next {
+    fill: #D3D3D3;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+
+    &:hover {
+      fill: #000000;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+// DOCTOR PORTFOLIO SLIDER
+
+.slider {
+  &-wrap {
+    h2 {
+      font-size: 20px;
+      line-height: 24px;
+      @include helveticaNeueCur-roman;
+      color: #222222;
+      letter-spacing: 0.01em;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.slider-portfolio {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    width: 750px;
+  }
+
+  margin-bottom: 30px;
+
+  .prev-arrow,
+  .next-arrow {
+    fill: #D3D3D3;
+    position: absolute;
+
+    &:hover {
+      fill: #000000;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+
+  .prev-arrow {
+    top: 50%;
+    left: 0;
+
+  }
+
+  .next-arrow {
+
+    top: 50%;
+    right: 0;
+
+  }
 }

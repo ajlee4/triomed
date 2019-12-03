@@ -10,4 +10,36 @@ $(document).ready(function(){
         prevArrow: $('.prev'),
         nextArrow: $('.next')
     });
+
+    $('#sertificat-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        infinite: true,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next')
+    });
+    $('#specialist-portfolio').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        infinite: true,
+        prevArrow: $('.prev-arrow'),
+        nextArrow: $('.next-arrow')
+    });
+
+    $('#diagnostic-port').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        infinite: true,
+        prevArrow: $('.prev-arrow'),
+        nextArrow: $('.next-arrow')
+    });
+
+
+   
   });

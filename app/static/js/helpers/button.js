@@ -1,54 +1,85 @@
 'use strict';
 
-"use strict";
+// MAIN PAGE  
 
-var bonusBtn = document.querySelector('.bonus-btn');
-var bonusTooltip = document.querySelector('.bonus-tooltip');
-var detailsBtn = document.querySelector('.details-btn');
-var sectionAboutInfo = document.querySelector('#about-info');
-var sectionAboutSubInfo = document.querySelector('#about-subinfo');
-var cardClient = document.querySelector('#card-client');
-var backBtn = document.querySelector('.back-btn');
-var resultBtn = document.querySelector('.result-btn');
-var workSection = document.querySelector('.work-scheme');
-var clientAdvice = document.querySelector('.client-advice');
-var backWorkBtn = document.querySelector('.back-work-btn');
-sectionAboutSubInfo.classList.remove('visible');
+$('#main-page').ready(function() {
+  $('.bonus-btn').on('click', function(e) {
+    e.preventDefault();
+   $('.bonus-tooltip').addClass('visible');
+   $('.bonus-btn').addClass('hidden');
 
-bonusBtn.onclick = function (e) {
+  });
+
+
+  $('.details-btn').on('click', function(e) {
+    e.preventDefault();
+   $('#about-info').addClass('hidden');
+   $('#about-subinfo').addClass('visible');
+   $('#card-client').hide()
+   $('#about-info').removeClass('animated');
+
+
+  });
+
+  $('.back-btn').on('click', function(e) {
+    e.preventDefault();
+   $('#about-info').removeClass('hidden');
+   $('#about-subinfo').removeClass('visible');
+   $('#card-client').show()
+   $('#about-info').addClass('animated');
+   $('.bonus-btn').removeClass('hidden');
+   $('.bonus-tooltip').removeClass('visible');
+
+  });
+  
+
+  $('.result-btn').on('click', function(e) {
+    e.preventDefault();
+   $('.work-scheme').addClass('hidden');
+   $('.client-advice').addClass('visible');
+   $('.work-scheme').removeClass('animated');
+
+
+  });
+  $('.back-work-btn').on('click', function(e) {
+    e.preventDefault();
+   $('.work-scheme').removeClass('hidden');
+   $('.client-advice').removeClass('visible');
+   $('.work-scheme').addClass('animated');
+
+
+  });
+
+
+
+
+});
+
+
+// DIAGNOSTIC PAGE
+
+$('#diagnostic-page').ready(function() {
+
+$('.diagnostic-detail-btn').on('click', function(e) {
   e.preventDefault();
-  bonusTooltip.classList.add('visible');
-  e.target.classList.add('hidden');
-};
+ $('#diagnostic-details').addClass('hidden');
+ $('#diagnostic-details-subinfo').addClass('visible');
+ $('#diagnostic-details').removeClass('animated');
 
-detailsBtn.onclick = function (e) {
-  e.preventDefault();
-  sectionAboutInfo.classList.add('hidden');
-  sectionAboutSubInfo.classList.add('visible');
-  cardClient.style.display = 'none';
-  sectionAboutInfo.classList.remove('animated');
-};
+});
 
-backBtn.onclick = function (e) {
+$('.diagnostic-details-back').on('click', function(e) {
   e.preventDefault();
-  sectionAboutInfo.classList.remove('hidden');
-  sectionAboutSubInfo.classList.remove('visible');
-  bonusTooltip.classList.remove('visible');
-  bonusBtn.classList.remove('hidden');
-  cardClient.style.display = 'block';
-  sectionAboutInfo.classList.add('animated');
-};
+ $('#diagnostic-details-subinfo').removeClass('visible');
+ $('#diagnostic-details').removeClass('hidden');
+ $('#diagnostic-details').addClass('animated');
+});
 
-resultBtn.onclick = function (e) {
-  e.preventDefault();
-  workSection.classList.add('hidden');
-  clientAdvice.classList.add('visible');
-  workSection.classList.remove('animated');
-};
+});
 
-backWorkBtn.onclick = function (e) {
-  e.preventDefault();
-  clientAdvice.classList.remove('visible');
-  workSection.classList.remove('hidden');
-  workSection.classList.add('animated');
-};
+//SPECIALIST PAGE
+
+
+
+
+

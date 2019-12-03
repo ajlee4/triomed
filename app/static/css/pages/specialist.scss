@@ -1,0 +1,143 @@
+
+// DOCTOR INFO
+
+.doctor-info {
+    .section {
+        &__inner {
+            display: flex;
+        }
+
+        &__left {
+            max-width: 60%;
+            padding-right: 30px;
+            .section {
+                &__title {
+                    margin-bottom: 40px;
+                }
+                &__info {
+                 font-size: 18px;
+                 line-height: 27px;
+                 color: #222222;
+              
+                }
+            }
+            .specialist {
+                &-info {
+                    margin-bottom: 30px;
+                }
+                &-desc {
+                    margin-bottom: 40px;
+                }
+                &-social {
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: #777777;
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                   
+                    span {
+                        display: inline-block;
+                        margin-right: 15px;
+                    }
+                    a {
+                        margin-right: 15px;
+                        display: inline-block;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                       &:hover {
+                           svg {
+                               fill:#C8102E ;
+                               transition: 0.3s;
+                           }
+                       }
+                    }
+                }
+            }
+        }
+        &__right {
+            padding-right: 10px;
+            .specialist-img {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                top: 50px;
+                img {
+                max-width: 350px;
+                margin-bottom: 20px;
+                border-radius: 4px;
+                }
+            }
+            .main-btn {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
+
+
+// DOCTOR EDUCATION
+
+.doctor-education {
+    .section {
+        &__inner {
+            padding-right: 80px;
+        }
+        &__info {
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: #222222;
+                @include helveticaNeueCur-roman;
+                margin-bottom: 10px;
+            }
+            b {
+                 font-size: 20px;
+                 line-height: 30px;
+                 color: #222222;
+                 @include helveticaNeueCur-medium;
+            }
+            &-top {
+                margin-bottom: 30px;
+            }
+            &-bottom {
+                display: flex;
+               justify-content: space-between;
+                .bottom-left {
+                 max-width: 50%;
+                }
+                .more {
+                    display: none;  
+                }
+                .bottom-right {
+                    padding-left: 80px;
+                    padding-right: 80px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// DOCTOR PORTFOLIO 
+
+
+.doctor-portfolio {
+    .section {
+        &__inner {
+            padding-right: 100px;
+        }
+        &__info {
+            .subtitle {
+                font-size: 20px;
+                line-height: 30px;
+                color: #222222;
+            }
+      
+       
+        }
+    }
+}

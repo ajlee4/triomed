@@ -151,6 +151,15 @@ margin-left: 80px;
 .details-price__btn {
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 180px;
+}
 
-
+.diagnostic-detail-btn {
+  font-size: 14px;
+  line-height: 21px;
+  color: #777777;
+  @include helveticaNeueCur-roman;
+  &:hover {
+    text-decoration: underline;
+  }
 }
