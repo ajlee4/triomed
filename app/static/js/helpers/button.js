@@ -51,7 +51,18 @@ $('#main-page').ready(function() {
   });
 
 
+$('.mobile-details-btn').on('click',function(e){
+  e.preventDefault()
+  $('.mobile-section__subinfo').slideDown();
+  $('.mobile-details-btn').css('display','none')
 
+})
+
+$('.mobile-back-btn').on('click',function(e) {
+  e.preventDefault()
+  $('.mobile-section__subinfo').slideUp();
+  $('.mobile-details-btn').css('display','block')
+})
 
 });
 

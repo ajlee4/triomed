@@ -1,5 +1,12 @@
-.main {
+.main-section {
   background-color: #F2F2F2;
+  position: relative;
+  height: 100vh;
+}
+
+
+.main {
+
   height: 100vh;
   width: 100%;
   display: flex;
@@ -8,7 +15,7 @@
 
   &__inner {
     width: 100%;
-
+     height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -44,7 +51,10 @@
       padding-left: 170px;
       text-align: center;
 
-   
+   @include mobile {
+     padding-left: 15px;
+     padding-right: 15px;
+   }
 
     }
 
@@ -57,6 +67,10 @@
         letter-spacing: 0.01em;
         text-align: center;
         margin-bottom: 35px;
+        @include mobile {
+          font-size: 28px;
+          line-height: 39px;
+        }
       }
 
       &__info {
@@ -79,6 +93,10 @@
   padding-left: 150px;
   padding-right: 340px;
   width: 100vw;
+  @include mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .nav {
@@ -91,7 +109,12 @@
 
 
   &__link {
-
+   @include mobile {
+     display: none;
+   }
+   &.mobile-link {
+     display: block;
+   }
     margin-right: 35px;
 
     &:last-child {
@@ -145,6 +168,9 @@
   z-index: 10;
   display: flex;
   align-items: center;
+  @include mobile {
+    display: none;
+  }
   &.menu-gray {
     background-color: #f2f2f2;
     transition: 0.3s;
@@ -155,7 +181,7 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05em;
-
+  
     .active-section {
       color: #222222;
     }
