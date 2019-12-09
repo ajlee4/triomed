@@ -90,19 +90,19 @@
  }
     .burger {
       &__box {
-        width: 34px;
+        width: 35px;
       }
 
       &__inner {
         transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
         transform: rotate(225deg);
         transition-delay: .12s;
-         width: 34px;
+         width: 35px;
         &:before {
           top: 0;
           transition: top .1s ease-out, opacity .1s ease-out .12s;
           opacity: 0;
-          width: 34px;
+          width: 35px;
         }
 
         &::after {

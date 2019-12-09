@@ -150,7 +150,11 @@
     @content;
   }
 }
-
+@mixin mobileS() {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
 @mixin no-mobile {
   @media (min-width: $mobileMedia + 1) {
     @content;
