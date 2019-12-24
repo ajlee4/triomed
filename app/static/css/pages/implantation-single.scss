@@ -1,0 +1,59 @@
+.content {
+    &.implantation-single{
+        .section {
+            &__inner {
+                padding-right: 64px;
+            }
+            &.implantation-single-main {
+                .section {
+                    &__title {
+                        margin-bottom: 20px;
+                    }
+                }
+                .image-group {
+                    display: flex;
+                    padding-bottom: 30px;
+                    .text {
+                        margin-bottom: 5px;
+                    }
+                }
+                .doctor-info {
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 0.01em;
+                    color: #777777;
+                    @include helveticaNeueCur-roman;
+
+                    p {
+                        margin-bottom: 10px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            &.implantation-single-about {
+                .result-field {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    margin-top: 60px;
+                    margin-bottom: 30px;
+                    &__left {
+                    color: #222222;
+                    font-size: 16px;
+                    line-height: 24px;
+                    @include helveticaNeueCur-roman;
+                    }
+                    &__right {
+                        @include helveticaNeueCur-roman;
+                        font-size: 14px;
+                        line-height: 21px;
+                        color: #777777;
+                    }
+                }
+            }
+        }
+    }
+}

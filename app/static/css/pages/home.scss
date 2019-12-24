@@ -1,30 +1,25 @@
 .main-section {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   position: relative;
   height: 100vh;
 }
 
-
 .main {
-
   height: 100vh;
   width: 100%;
   display: flex;
   position: relative;
- background-color: #F2F2F2;
+  background-color: #f2f2f2;
 
   &__inner {
     width: 100%;
-     height: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-
-
-
   }
 
   &__logo {
-    background: url($images_dir+ 'main-bg.png');
+    background: url($images_dir+'main-bg.png');
     background-repeat: no-repeat;
     width: 430px;
     height: 530px;
@@ -39,13 +34,11 @@
       height: 385px;
       margin-top: -192px;
       margin-left: -156px;
-      background-size: cover;;
+      background-size: cover;
     }
- 
   }
 
   .section-main {
-
     position: relative;
     z-index: 10;
     display: flex;
@@ -62,13 +55,10 @@
       padding-left: 170px;
       text-align: center;
 
-   @include mobile {
-     padding-left: 15px;
-     padding-right: 15px;
-  
-
-   }
-
+      @include mobile {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
 
     .main {
@@ -102,12 +92,9 @@
       }
     }
   }
-
-
 }
 
 .content {
-
   position: relative;
   padding-left: 150px;
   padding-right: 340px;
@@ -119,21 +106,19 @@
 }
 
 .nav {
-
   list-style: none;
   display: flex;
- 
+
   z-index: 9999;
   padding: 20px 30px;
 
-
   &__link {
-   @include mobile {
-     display: none;
-   }
-   &.mobile-link {
-     display: block;
-   }
+    @include mobile {
+      display: none;
+    }
+    &.mobile-link {
+      display: block;
+    }
     margin-right: 35px;
 
     &:last-child {
@@ -151,8 +136,6 @@
         left: 0;
         @include sprite('arrow-down');
       }
-
-
     }
 
     color: #777777;
@@ -181,34 +164,53 @@
   position: fixed;
 
   height: 80px;
-  max-width: 1140px;
+ 
   width: 100%;
   bottom: 0;
   z-index: 10;
   display: flex;
   align-items: center;
+ 
+ padding-right: 340px;
   @include mobile {
     display: none;
   }
   &.menu-gray {
     background-color: #f2f2f2;
-    transition: 0.3s;
-}
+   
+    &:after,&:before {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-color: #f2f2f2;
+      top: 0;
+   
+    }
+    &:after {
+      left: 100%;
+    }
+    &:before {
+      right: 100%;
+    }
+  }
   .counter {
     margin-right: 50px;
     @include helveticaNeueCur-roman;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05em;
-  
+
     .active-section {
       color: #222222;
     }
 
     .amount-section {
-      color: #A7A7A7;
+      color: #a7a7a7;
     }
   }
 }
 
-.section {}
+.section {
+}

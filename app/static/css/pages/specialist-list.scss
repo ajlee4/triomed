@@ -1,0 +1,19 @@
+.content {
+    &.specialist-list {
+        .section {
+            &.specialist-list-main {
+                .section {
+                    &__inner {
+                        padding-right: 54px;
+                    }
+                    &__info-top {
+                        margin-top: 15px;
+                        margin-bottom: 35px;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
+}

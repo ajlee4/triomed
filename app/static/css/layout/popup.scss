@@ -22,7 +22,33 @@
     position: relative;
     max-height: 95%;
     overflow-y: auto;
-
+    &.footer-popup {
+      width: 590px;
+      height: 380px;
+      max-width: 100%;
+    }
+    &.footer-subpopup {
+      width: 510px;
+      height: 214px;
+      max-width: 100%;
+      .popup {
+        &__info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+       
+        }
+        &__text {
+          font-size: 20px;
+          line-height: 26pxx;
+          color: #222222;
+          text-align: center;
+          @include helveticaNeueCur-roman;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
+    }
     &.phide {
       display: none;
     }
@@ -34,8 +60,8 @@
 
   &__close {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 20px;
+    right: 20px;
     z-index: 1;
   }
 }
