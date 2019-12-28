@@ -33,10 +33,10 @@ $(function() {
   $(window).scroll(function () {
     var height = $(window).scrollTop();
     if (height > 50) {
-  $('.bottom-menu').removeClass('menu-gray');
+  $('#bottom-menu-gray').removeClass('menu-gray');
        
     } else {
-      $('.bottom-menu').addClass('menu-gray');
+      $('#bottom-menu-gray').addClass('menu-gray');
     }
   });
 

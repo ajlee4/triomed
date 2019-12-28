@@ -1,0 +1,99 @@
+.content {
+    &.about-page {
+ 
+        .section {
+            &__inner {
+                padding-right: 64px;
+            }
+            &.about-page-main {
+                position: relative;
+                background: linear-gradient(298.65deg, #D8D8D8 8.34%, rgba(255, 255, 255, 0.3) 91.1%);
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-image: url($images_dir+'back_about 2.png');
+                    display: block;
+                    height: 100%;
+                    width: 60%;
+                    background-repeat: no-repeat;
+                    background-position:top right;
+                    background-size: cover;
+                 
+                }
+                .section {
+                  &__title {
+                      margin-bottom: 60px;
+                  }
+                  &__info {
+                      max-width: 60%;
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: #222222;
+                      @include helveticaNeueCur-roman;
+                      .text-padding {
+                         padding-left: 15px;
+                      }
+                  }
+                //   &__bg {
+                //       position: absolute;
+                //       top: 0;
+                //       right: 0;
+                      
+                //       z-index: -1;
+                //   }
+                }
+            }
+            &.about-page-reason {
+                .section {
+                    &__title {
+                        margin-bottom: 90px;
+                    }
+                    &__info {
+                        .reason__col {
+                            @include helveticaNeueCur-roman;
+                            color: #222222;
+                            padding-left: 50px;
+                            padding-top: 10px;
+                            margin-bottom: 50px;
+                            .col {
+                                &__title {
+                                font-size: 16px;
+                                line-height: 21px;
+                                
+                                position: relative;
+                                margin-bottom: 16px;
+                                svg {
+                                 position: absolute;
+                                 right: 100%;
+                                 top: -10px;
+                                 margin-right: 10px;
+                                }
+                                }
+                                &__info {
+                                   font-size: 16px;
+                                   line-height: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.about-page-sertificat {
+                .section{
+                    &__title {
+                        margin-bottom: 30px;
+                    }
+                    &__info {
+                        margin-bottom: 50px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        @include helveticaNeueCur-roman;
+                        color: #222222;
+                    }
+                }
+            }
+        }
+    }
+}

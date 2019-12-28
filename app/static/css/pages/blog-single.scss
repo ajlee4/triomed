@@ -1,0 +1,63 @@
+.content {
+  &.blog-single {
+    .section {
+      &__inner {
+        padding-right: 64px;
+      }
+      &.blog-single-main {
+        .section {
+          &__title {
+            margin-bottom: 25px;
+          }
+          &__category {
+            font-size: 14px;
+            line-height: 18px;
+            color: #777777;
+            @include helveticaNeueCur-roman;
+            margin-bottom: 20px;
+          }
+          &__info {
+            @include helveticaNeueCur-roman;
+            display: flex;
+            margin-bottom: 60px;
+            &-left {
+                max-width: 60%;
+                padding-right: 40px;
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                    &.info-title {
+                        font-size: 22px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            &-right {
+                max-width: 40%;
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+            }
+          }
+          &__action {
+              .back-link {
+                font-size: 14px;
+                line-height: 18px;
+                color: #777777;
+                @include helveticaNeueCur-roman;
+                display: flex;
+                align-items: center;
+                &:before {
+                    @include sprite('diagnostic-detail-arrow-left');
+                    display: inline-block;
+                    margin-right: 8px;
+                    content: '';
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+}

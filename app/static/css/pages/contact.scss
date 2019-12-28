@@ -1,0 +1,40 @@
+.content {
+    &.contact-page {
+    
+        .section{
+            &__inner {
+                padding-right: 64px;
+            }
+            &.contact-page-main {
+                max-height: 100vh;
+                .section {
+                   
+                    &__inner {
+                        height: 100%;
+                      
+                    }
+                    &__title {
+                        margin-bottom: 25px;
+                    }
+                    &__info {
+                       position: relative;
+                       height: 100%;
+                       .back-reviews-link {
+                         font-size: 14px;
+                         line-height: 14px;
+                         color: #777777;
+                         @include helveticaNeueCur-roman;
+                         position: absolute;
+                         bottom: 0;
+                         left: 0;
+                         margin-bottom: 80px;
+                         svg {
+                             margin-right: 10px;
+                         }
+                       }
+                    }
+                }
+            }
+        }
+    }
+}

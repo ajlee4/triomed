@@ -1,0 +1,126 @@
+.content {
+  &.reviews {
+    .section {
+      padding-bottom: 0px;
+      max-height: 100vh;
+      &__inner {
+        overflow: hidden;
+        height: 100%;
+
+        padding-right: 64px;
+      }
+      &.reviews-main {
+        .section {
+          &__title {
+            margin-bottom: 10px;
+          }
+          &__action {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+            .primary-btn {
+              color: #333333;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              &:hover {
+                color: #ffffff;
+              }
+            }
+          }
+          &__info {
+            max-width: 80%;
+
+            .reviews-list {
+              height: auto;
+              @include helveticaNeueCur-roman;
+              &__item {
+                margin-bottom: 30px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                .item {
+                  &-name {
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #222222;
+                    font-weight: 600;
+                  }
+                  &-proffesion {
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #777777;
+                    margin-bottom: 15px;
+                  }
+                  &-text {
+                    display: flex;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #222222;
+
+                    .item-text-icon {
+                      display: block;
+                      padding-right: 10px;
+                    }
+                  }
+                }
+              }
+              &.videoreviews {
+                .reviews-list__item {
+                  display: flex;
+
+                  .item__left {
+                    padding-right: 10px;
+                    img {
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+                  .item__right {
+                    width: 60%;
+                    .item-text {
+                      max-width: 400px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .reviews-form {
+          display: none;
+
+          &.visible {
+            display: flex;
+            height: 100%;
+          }
+          .text-field {
+            padding-left: 20px;
+            position: relative;
+            top: 48px;
+            font-size: 16px;
+            line-height: 24px;
+            @include helveticaNeueCur-roman;
+          }
+          form {
+            position: static;
+          }
+          .back-reviews {
+            color: #777777;
+            @include helveticaNeueCur-roman;
+            font-size: 14px;
+            line-height: 14px;
+
+            position: absolute;
+            bottom: 0;
+            left: 54px;
+            margin-bottom: 80px;
+            cursor: pointer;
+            svg {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

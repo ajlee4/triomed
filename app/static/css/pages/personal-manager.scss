@@ -1,0 +1,132 @@
+.content {
+  &.personal-manager-page {
+    .section {
+      &__inner {
+        padding-right: 64px;
+        position: relative;
+        z-index: 20;
+      }
+      &.personal-manager-main {
+        background: linear-gradient(298.68deg, #d8d8d8 8.34%, rgba(255, 255, 255, 0.3) 91.1%);
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 80px;
+            
+            right: 0;
+            background-image: url($images_dir +'personal-manager.png');
+            display: block;
+            height: 507px;
+            width: 473px;
+            max-width: 100%;
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: cover;
+            padding-bottom: 80px;
+            z-index: 5;
+          }
+        .section {
+          &__title {
+            max-width: 60%;
+            margin-bottom: 66px;
+            position: relative;
+            z-index: 10;
+          }
+          &__info {
+            max-width: 60%;
+            font-size: 16px;
+            line-height: 24px;
+            color: #222222;
+            @include helveticaNeueCur-roman;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 10;
+          }
+          &__action {
+            .main-btn {
+              padding-top: 15px;
+              padding-bottom: 15px;
+            }
+          }
+        }
+      }
+      &.personal-manager-tasks{
+          .section {
+              &__title {
+                  margin-bottom: 35px;
+
+              }
+              &__subtitle {
+                  font-size: 16px;
+                  line-height: 24px;
+                  @include helveticaNeueCur-roman;
+                  margin-bottom: 30px;
+              }
+              &__info {
+                  margin-bottom: 30px;
+                  .task__row {
+                  margin-left: -10px;
+                  margin-right: -10px;
+                  }
+                  .task__col {
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      &-inner {
+                          padding: 10px 15px;
+                          border: 1px dashed #222222;
+                          height: 360px;
+                      }
+                      .col__title {
+                          font-size: 16px;
+                          line-height: 24px;
+                          @include helveticaNeueCur-roman;
+                          margin-bottom: 16px;
+                          font-weight:600;
+                      }
+                      .col__list {
+                          list-style: disc outside;
+                          padding-left: 10px;
+                          .list__item {
+                              font-size: 14px;
+                              line-height: 22px;
+                              @include helveticaNeueCur-roman;
+                              color: #222222;
+                              margin-bottom: 15px;
+                              &:last-child {
+                                  margin-bottom: 0;
+                              }
+                          }
+                      }
+                  }
+              }
+              &__subinfo {
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: #222222;
+                  @include helveticaNeueCur-roman;
+                  font-weight: 600;
+              }
+          }
+      }
+      &.personal-manager-actions{
+          .section {
+              &__title {
+                  margin-bottom: 35px;
+              }
+              &__info {
+                  p {
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: #222222;
+                      @include helveticaNeueCur-roman;
+                      &.text-padding {
+                          padding-left: 20px;
+                      }
+                  }
+              }
+          }
+      }
+    }
+  }
+}

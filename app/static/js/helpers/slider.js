@@ -74,7 +74,6 @@ $(document).ready(function() {
     $('.portfolio-page-slider').addClass('created'),
   );
 
-
   $('#specialist-list-slider').slick(
     {
       slidesToShow: 1,
@@ -85,4 +84,53 @@ $(document).ready(function() {
     $('.specialist-list-slider').addClass('created'),
   );
 
+  $('#about-page-sertificat-slider').slick(
+    {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+    },
+    $('.about-page-sertificat-slider').addClass('created'),
+  );
+
+  $('#blog-list-slider').slick(
+    {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+    },
+    $('.blog-list-slider').addClass('created'),
+  );
+
+  $('#blog-single-slider').slick(
+    {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+    },
+    $('.blog-single-slider').addClass('created'),
+  );
+
+  $('#reviews-list-slider').slick(
+    {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+    },
+    $('.reviews-list-slider').addClass('created'),
+  );
+
+  $('#videoreviews-list-slider').slick(
+    {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.prev-video-slider'),
+      nextArrow: $('.next-video-slider'),
+    },
+    $('.videoreviews-list-slider').addClass('created'),
+  );
 });

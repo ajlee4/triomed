@@ -1,30 +1,40 @@
 // DIAGNOSTIC-DESC
 
 .diagnostic-desc {
-
-  background-color: #F2F2F2;
+  background: radial-gradient(113.74% 99.6% at -14.15% 0.53%, #f9f9f9 0%, #dfdfdf 100%);
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    background-image: url($images_dir+'diagnostic-bg.png');
+    display: block;
+    height: 620px;
+    width: 660px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    padding-bottom: 80px;
+  }
 
   .section {
     &__inner {
- 
       position: relative;
-      
+
       background-repeat: no-repeat;
       background-size: cover;
-  
- 
-       max-height: 100vh;
+
+      max-height: 100vh;
       &-wrap {
         max-width: 80%;
-     
       }
       &:before {
         position: absolute;
         top: 0;
         left: 0;
-      width: 100%;
-      height: 100%;
-  
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -41,7 +51,6 @@
 
       p {
         margin-bottom: 7px;
-
       }
 
       b {
@@ -68,7 +77,7 @@
         }
 
         .tooltip {
-          border-bottom: 1px dashed #C8102E;
+          border-bottom: 1px dashed #c8102e;
           cursor: pointer;
           position: relative;
 
@@ -77,9 +86,7 @@
               visibility: visible;
               opacity: 1;
               transition: 0.3s;
-
             }
-
           }
 
           &__box {
@@ -90,7 +97,7 @@
             opacity: 0;
             color: #222222;
             background-color: #fff;
-            box-shadow: 0 2px 19px 0 rgba(0, 0, 0, .06);
+            box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.06);
             width: 250px;
             padding: 10px;
             border-radius: 4px;
@@ -103,13 +110,11 @@
           }
 
           margin-bottom: 5px;
-
         }
       }
     }
   }
 }
-
 
 // DIAGNOSTIC-PRICE
 
@@ -119,7 +124,8 @@
       padding-top: 100px;
 
       &-wrap {
-        max-width: 60%;
+        padding-right: 64px;
+        width: 100%;
       }
     }
 
@@ -131,11 +137,53 @@
       font-size: 16px;
       line-height: 24px;
       color: #222222;
+      .advantages {
+        margin-top: 50px;
+        display: flex;
+        padding: 15px;
+        border: 1px dashed #222222;
+        justify-content: space-between;
+        &__item {
+          display: flex;
+          align-items: center;
+          position: relative;
+          z-index: 99;
+          span {
+            max-width: 100px;
+          }
+
+          &:hover {
+            span {
+              text-decoration: underline;
+              display: inline-block;
+            }
+            .tooltip {
+              visibility: visible;
+              opacity: 1;
+              transition: 0.3s;
+            }
+          }
+          .tooltip {
+            box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.06);
+            width: 250px;
+            padding: 10px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 100%;
+            left: 70%;
+            z-index: 9999;
+            background-color: #fff;
+            visibility: hidden;
+            opacity: 0;
+          }
+        }
+      }
     }
   }
 
   .price {
     &-list {
+      width: 70%;
       list-style: none;
       margin-bottom: 50px;
 
@@ -147,57 +195,52 @@
         &:last-child {
           margin-bottom: 0;
         }
-
-        &:hover {
-          .details-price__btn {
-            visibility: visible;
-            opacity: 1;
-
-
-          }
-        }
-
-        .details-price__btn {
-          visibility: hidden;
-          opacity: 0;
-
-          position: absolute;
-          left: 100%;
-
-          top: 0;
-          display: flex;
-          align-items: center;
-          border-radius: 4px;
-
-          &:hover {
-            svg {
-              fill: #fff;
-            }
-          }
-
-          svg {
-
-            margin-left: 5px;
-            fill: #C8102E;
-          }
-        }
       }
 
       &__link {
         display: flex;
         justify-content: space-between;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 16px;
+        line-height: 24px;
         color: #222222;
 
-        &:hover {
-          text-decoration: underline;
+        .title {
+          position: relative;
+        }
+        .quest-icon {
+          position: relative;
+          top: -5px;
+          margin-left: 2px;
+          &:hover {
+            + .tooltip {
+              visibility: visible;
+              opacity: 1;
+              transition: 0.3s;
+            }
+          }
         }
 
+        .tooltip {
+          font-size: 14px;
+          line-height: 21px;
+          color: #777777;
+          @include helveticaNeueCur-roman;
+          width: 470px;
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          padding: 15px;
+          position: absolute;
+          bottom: 100%;
+          margin-bottom: -20px;
+          visibility: hidden;
+          opacity: 0;
+          left: 100%;
+          background-color: #fff;
+          z-index: 10;
+          transition: 0.3s;
+        }
 
         span {
           display: inline-block;
-
         }
 
         .price {
@@ -205,10 +248,8 @@
         }
       }
     }
-
   }
 }
-
 
 // DIAGNOSTIC-SPECIALIST
 
@@ -217,7 +258,6 @@
     &__inner {
       padding-top: 100px;
     }
-
   }
 }
 
@@ -227,7 +267,6 @@
   padding-bottom: 80px;
 
   .section {
-
     &__inner {
       padding-top: 100px;
       padding-left: 70px;
@@ -253,6 +292,13 @@
       .subtitle {
         font-size: 20px;
         line-height: 30px;
+      }
+      .doctor-info {
+        p {
+          font-size: 14px;
+          line-height: 14px;
+          color: #777777;
+        }
       }
     }
   }
@@ -305,41 +351,40 @@
             margin-bottom: 20px;
           }
           &__info {
-              display: flex;
-              border: 1px dashed #222222;
-              position: relative;
-              p {
-                  margin-bottom: 15px;
+            display: flex;
+            border: 1px dashed #222222;
+            position: relative;
+            p {
+              margin-bottom: 15px;
+            }
+            .title {
+              font-size: 16px;
+              line-height: 24px;
+              @include helveticaNeueCur-medium;
+              color: #222222;
+            }
+            &-right,
+            &-left {
+              padding: 20px;
+            }
+            &-left {
+              border-right: 1px dashed #222222;
+            }
+            .diagnostic-details-back {
+              position: absolute;
+              top: 100%;
+              right: 0;
+              color: #777777;
+              @include helveticaNeueCur-roman;
+              z-index: 9999;
+              &:hover {
+                text-decoration: underline;
               }
-              .title {
-                  font-size: 16px;
-                  line-height: 24px;
-                  @include helveticaNeueCur-medium;
-                  color: #222222;
+              &:before {
+                content: '';
+                @include sprite('diagnostic-detail-arrow-left');
               }
-              &-right,&-left {
-                  padding: 20px;
-              }
-              &-left {
-                  border-right: 1px dashed #222222;
-              }
-              .diagnostic-details-back {
-                 
-                      position: absolute;
-                      top: 100%;
-                      right: 0;
-                      color: #777777;
-                      @include helveticaNeueCur-roman;
-                      z-index: 9999;
-                      &:hover {
-                          text-decoration: underline;
-                      }
-                      &:before {
-                        content: '';
-                        @include sprite('diagnostic-detail-arrow-left');
-
-                      }
-              }
+            }
           }
         }
       }

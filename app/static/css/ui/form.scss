@@ -64,50 +64,96 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-.form {
-  &__title,&__subtitle {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 20px;
-    line-height: 26px;
-    @include helveticaNeueCur-roman;
-    color: #222222;
-    text-align: center;
-    max-width: 60%;
+
+  .form {
+    &__title,
+    &__subtitle {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 20px;
+      line-height: 26px;
+      @include helveticaNeueCur-roman;
+      color: #222222;
+      text-align: center;
+      max-width: 60%;
+    }
+    &__subtitle {
+      padding-top: 0;
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
-  &__subtitle {
-    padding-top: 0;
-    font-size: 16px;
-    line-height: 21px;
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    align-items: center;
+
+    input {
+      outline: none;
+
+      margin-bottom: 15px;
+      height: 38px;
+      width: 350px;
+      border: 1px solid #c7c7c7;
+      padding-left: 15px;
+      padding-right: 15px;
+      &::placeholder {
+        font-size: 14px;
+        line-height: 18px;
+        color: #777777;
+        @include helveticaNeueCur-roman;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
- 
 }
-.input-group {
+
+//CONTACT FORM
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
-  align-items: center;
-
-  input {
-    outline: none;
-   
-    margin-bottom: 15px;
-    height: 38px;
-    width: 350px;
-    border: 1px solid #C7C7C7;
-    padding-left: 15px;
-    padding-right: 15px;
-    &::placeholder{
-     
-       font-size: 14px;
-       line-height: 18px;
-       color: #777777;
-       @include helveticaNeueCur-roman;
+  width: 460px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  .form {
+    &__title {
+      @include helveticaNeueCur-roman;
+      font-size: 20px;
+      line-height: 26px;
+      color: #222222;
+      margin-bottom: 28px;
+      font-weight: 600;
     }
-    &:last-child {
-      margin-bottom: 0;
+    &__input,
+    &__textarea {
+      outline: none;
+      border: 1px solid #c7c7c7;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 15px;
+      margin-bottom: 16px;
+      *::placeholder {
+        font-size: 14px;
+        line-height: 18px;
+        @include helveticaNeueCur-roman;
+        color: #777777;
+      }
+    }
+    &__textarea {
+      resize: none;
     }
   }
-}
+  .primary-btn {
+    width: 194px;
+    color: #333333;
+    margin-left: auto;
+    &:hover {
+      color: #ffffff;
+    }
+  }
 }

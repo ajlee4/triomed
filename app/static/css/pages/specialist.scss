@@ -2,6 +2,7 @@
 // DOCTOR INFO
 
 .doctor-info {
+   
     .section {
         &__inner {
             display: flex;
@@ -135,6 +136,10 @@
                 font-size: 20px;
                 line-height: 30px;
                 color: #222222;
+              
+            }
+            .doctor-info {
+                color: #777777;
             }
       
        
