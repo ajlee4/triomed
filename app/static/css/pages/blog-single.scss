@@ -1,10 +1,15 @@
 .content {
   &.blog-single {
+  
     .section {
       &__inner {
         padding-right: 64px;
+        padding-bottom: 20px;
       }
       &.blog-single-main {
+   @include desktop-large {
+    overflow: hidden;
+   }
         .section {
           &__title {
             margin-bottom: 25px;
@@ -20,6 +25,9 @@
             @include helveticaNeueCur-roman;
             display: flex;
             margin-bottom: 60px;
+            @include desktop-large {
+              margin-bottom: 30px;
+            }
             &-left {
                 max-width: 60%;
                 padding-right: 40px;
@@ -41,6 +49,7 @@
             }
           }
           &__action {
+           padding-bottom: 20px;
               .back-link {
                 font-size: 14px;
                 line-height: 18px;
@@ -48,6 +57,7 @@
                 @include helveticaNeueCur-roman;
                 display: flex;
                 align-items: center;
+             
                 &:before {
                     @include sprite('diagnostic-detail-arrow-left');
                     display: inline-block;

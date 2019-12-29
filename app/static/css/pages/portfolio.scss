@@ -1,8 +1,14 @@
 .content {
     &.portfolio {
-    
+    .nav__link {
+        &:before {
+            display: none;
+        }
+    }
         .section {
-          
+            &__title {
+                margin-bottom: 30px;
+            }
             &__inner {
                 padding-right: 64px;
             }

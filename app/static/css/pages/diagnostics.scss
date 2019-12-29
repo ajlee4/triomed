@@ -267,6 +267,10 @@
   padding-bottom: 80px;
 
   .section {
+    &__top {
+      display: flex;
+      justify-content: center;
+    }
     &__inner {
       padding-top: 100px;
       padding-left: 70px;

@@ -122,13 +122,13 @@
   .prev {
     top: 30%;
     left: 0;
-    margin-left: -20px;
+
   }
 
   .next {
     transform: rotate(180deg);
     top: 30%;
-    right: 0;
+    right: 5px;
   }
 }
 
@@ -216,23 +216,11 @@
 
 // DOCTOR PORTFOLIO SLIDER
 
-.slider {
-  &-wrap {
-    h2 {
-      font-size: 20px;
-      line-height: 24px;
-      @include helveticaNeueCur-roman;
-      color: #222222;
-      letter-spacing: 0.01em;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-}
+
 
 .slider-portfolio {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+ 
   position: relative;
   .slider-item {
     opacity: 0;
@@ -245,7 +233,7 @@
   &__inner {
     display: flex;
     justify-content: center;
-    width: 750px;
+    max-width: 750px;
   }
 
   margin-bottom: 30px;
@@ -264,12 +252,15 @@
 
   .prev-arrow {
     top: 50%;
-    left: 0;
+    right: 100%;
+        margin-right: 5px;
   }
 
   .next-arrow {
     top: 50%;
-    right: 0;
+  left: 100%;
+  margin-left: 5px;
+ 
   }
 }
 
@@ -344,7 +335,7 @@
 
 .portfolio-page-slider {
   width: 100%;
-  height: 500px;
+  overflow: hidden;
   .slider-item {
     opacity: 0;
   }
@@ -396,7 +387,7 @@
   .portfolio-next {
     transform: rotate(180deg);
     position: relative;
-    top: -3px;
+    top: -1px;
   }
   .portfolio-prev {
     margin-right: 20px;
@@ -475,7 +466,7 @@
   .portfolio-next {
     transform: rotate(180deg);
     position: relative;
-    top: -3px;
+    top: -1px;
   }
   .portfolio-prev {
     margin-right: 20px;
@@ -541,7 +532,7 @@
     justify-content: flex-end;
     align-items: center;
     padding-right: 30px;
-    padding-top: 50px;
+    padding-top: 30px;
     position: relative;
     z-index: 20;
     @include mobile {
@@ -559,7 +550,7 @@
   .next {
     position: relative;
     transform: rotate(180deg);
-    top: -3px;
+    top: -1px;
   }
   .prev {
     margin-right: 20px;
@@ -569,8 +560,9 @@
 //BLOG-SINGLE-SLIDER
 
 .blog-single-slider {
+  overflow: hidden;
   .slider__inner {
-    height: 460px;
+    overflow: hidden;
     padding-bottom: 10px;
   }
   .slider__item {

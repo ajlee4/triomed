@@ -1,10 +1,17 @@
 .content {
     &.blog-list {
+      
         .section {
             &__inner {
                 padding-right: 64px;
+          
+             
             }
             &.blog-list-main {
+              @include desktop-large {
+                overflow: hidden;
+              }
+              
                 .section {
                     &__title {
                       margin-bottom: 15px;

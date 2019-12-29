@@ -178,6 +178,17 @@
     @content;
   }
 }
+@mixin desktop-large() {
+  @media (min-width:  1440px + 1) {
+    @content;
+  }
+}
+
+@mixin desktop-medium() {
+  @media (min-width:  1199px) and (max-width: 1400px) {
+    @content;
+  }
+}
 
 @function hsla-calc($color, $opacity) {
   @return hsla(hue($color), saturation($color), lightness($color), $opacity);

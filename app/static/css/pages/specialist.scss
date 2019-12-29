@@ -128,10 +128,25 @@
 
 .doctor-portfolio {
     .section {
+        &__title {
+            margin-bottom: 20px;
+        }
         &__inner {
             padding-right: 100px;
+            .slider-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
         }
+       
         &__info {
+
+        
+            p {
+                margin-bottom: 10px;
+            }
             .subtitle {
                 font-size: 20px;
                 line-height: 30px;
