@@ -179,13 +179,13 @@
   }
 }
 @mixin desktop-large() {
-  @media (min-width:  1440px + 1) {
+  @media (min-width:  1440px) {
     @content;
   }
 }
 
 @mixin desktop-medium() {
-  @media (min-width:  1199px) and (max-width: 1400px) {
+  @media (min-width:  1200px) and (max-width: 1439px) {
     @content;
   }
 }

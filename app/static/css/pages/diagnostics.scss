@@ -340,6 +340,8 @@
           opacity: 1;
           animation: fadeInLeft 1s;
           position: static;
+         padding-bottom: 40px;
+         overflow: hidden;
         }
 
         .section {
@@ -359,7 +361,7 @@
             border: 1px dashed #222222;
             position: relative;
             p {
-              margin-bottom: 15px;
+              margin-bottom: 10px;
             }
             .title {
               font-size: 16px;

@@ -2,6 +2,8 @@
     &.specialist-list {
         .section {
             &.specialist-list-main {
+                overflow: hidden;
+             
                 .section {
                     &__inner {
                         padding-right: 54px;

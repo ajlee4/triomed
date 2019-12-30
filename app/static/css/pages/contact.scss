@@ -6,7 +6,7 @@
                 padding-right: 64px;
             }
             &.contact-page-main {
-                max-height: 100vh;
+             overflow: hidden;
                 .section {
                    
                     &__inner {

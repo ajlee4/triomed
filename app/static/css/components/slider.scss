@@ -236,7 +236,7 @@
     max-width: 750px;
   }
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   .prev-arrow,
   .next-arrow {
@@ -384,11 +384,7 @@
       cursor: pointer;
     }
   }
-  .portfolio-next {
-    transform: rotate(180deg);
-    position: relative;
-    top: -1px;
-  }
+
   .portfolio-prev {
     margin-right: 20px;
   }
@@ -463,11 +459,7 @@
       cursor: pointer;
     }
   }
-  .portfolio-next {
-    transform: rotate(180deg);
-    position: relative;
-    top: -1px;
-  }
+ 
   .portfolio-prev {
     margin-right: 20px;
   }
@@ -547,11 +539,7 @@
       cursor: pointer;
     }
   }
-  .next {
-    position: relative;
-    transform: rotate(180deg);
-    top: -1px;
-  }
+
   .prev {
     margin-right: 20px;
   }
@@ -594,11 +582,7 @@
       cursor: pointer;
     }
   }
-  .next {
-    position: relative;
-    transform: rotate(180deg);
-    top: -1px;
-  }
+
   .prev {
     margin-right: 20px;
   }
@@ -637,11 +621,7 @@
       cursor: pointer;
     }
   }
-  .next {
-    position: relative;
-    transform: rotate(180deg);
-    top: -1px;
-  }
+
   .prev {
     margin-right: 20px;
   }
@@ -680,11 +660,7 @@
       cursor: pointer;
     }
   }
-  .next-video-slider {
-    position: relative;
-    transform: rotate(180deg);
-    top: -1px;
-  }
+
   .prev-video-slider {
     margin-right: 20px;
   }
