@@ -344,7 +344,7 @@
         font-size: 20px;
         line-height: 30px;
       }
-      .doctor-info {
+      .doctor-info-text {
         p {
           font-size: 14px;
           line-height: 14px;
@@ -465,6 +465,7 @@
         @include desktop-medium {
           margin-top: 8px;
           font-size: 18px;
+          line-height: 21px;
 
         }
 
