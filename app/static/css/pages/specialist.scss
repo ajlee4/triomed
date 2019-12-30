@@ -2,8 +2,9 @@
 // DOCTOR INFO
 
 .doctor-info {
-   
+    background: linear-gradient(298.68deg, #D8D8D8 8.34%, rgba(255, 255, 255, 0.3) 91.1%);
     .section {
+        @include helveticaNeueCur-roman;
         &__inner {
             display: flex;
         }
@@ -19,7 +20,7 @@
                  font-size: 18px;
                  line-height: 27px;
                  color: #222222;
-              
+                 @include helveticaNeueCur-roman;
                 }
             }
             .specialist {
@@ -87,6 +88,9 @@
         &__inner {
             padding-right: 80px;
         }
+        &__title {
+            margin-bottom: 10px;
+        }
         &__info {
             p {
                 font-size: 16px;
@@ -108,7 +112,7 @@
                 display: flex;
                justify-content: space-between;
                 .bottom-left {
-                 max-width: 50%;
+                 max-width: 70%;
                 }
                 .more {
                     display: none;  
@@ -137,6 +141,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                @include desktop-medium {
+                    align-items: flex-start;
+                }
             }
             
         }
@@ -153,7 +160,7 @@
                 color: #222222;
               
             }
-            .doctor-info {
+            .doctor-info-text {
                 color: #777777;
             }
       

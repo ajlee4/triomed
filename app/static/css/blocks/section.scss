@@ -1,5 +1,5 @@
 .section {
-  padding-bottom: 80px;
+  padding-bottom: 66px;
   position: relative;
   @include mobile {
     padding-bottom: 0;
@@ -446,6 +446,7 @@
               img {
                 max-width: 124px;
                 max-height: 135px;
+             
               }
             }
           }
@@ -491,8 +492,14 @@
 
           &__img {
             img {
-              max-width: 124px;
+          
               max-height: 135px;
+           
+                max-width: 100px;
+             
+            }
+            @include desktop-medium {
+         
             }
           }
           &.therapy-mobile {
@@ -577,12 +584,19 @@
             font-size: 14px;
             line-height: 18px;
             padding: 8px 12px;
+            @include desktop-medium {
+              padding-top: 6px;
+              padding-bottom: 6px;
+            }
             @include mobile {
               margin-left: -20px;
             }
             &-pos {
               @include helveticaNeueCur-medium;
               margin-bottom: 3px;
+              @include desktop-medium {
+                margin-bottom: 0;
+              }
             }
 
             &-name {
@@ -757,6 +771,10 @@
       padding-bottom: 15px;
       padding-left: 15px;
       padding-right: 15px;
+      @include desktop-medium {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
       @include mobile {
         display: none;
       }
@@ -846,6 +864,9 @@
       display: flex;
       align-items: flex-start;
       border: 1px dashed #222222;
+      @include desktop-medium {
+        top: 370px;
+      }
       @include mobile {
         display: flex;
         justify-content: space-between;
@@ -863,6 +884,9 @@
         letter-spacing: 0.01em;
         color: #222222;
         padding: 8px 20px;
+        @include desktop-medium {
+          padding-bottom: 0;
+        }
         @include mobile {
           padding: 0;
           margin-left: 10px;
@@ -870,6 +894,11 @@
         p {
           line-height: 17px;
           margin-bottom: 10px;
+          @include desktop-medium {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
         }
       }
     }
@@ -941,6 +970,7 @@
         .main-btn {
           padding-bottom: 12px;
           padding-top: 12px;
+          white-space: nowrap;
           @include mobile {
             padding-left: 35px;
             padding-right: 35px;

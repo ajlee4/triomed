@@ -97,6 +97,10 @@
 .content {
   position: relative;
   padding-left: 150px;
+  @include desktop-medium {
+    padding-left: 120px;
+    padding-right: 290px;
+  }
   padding-right: 340px;
   width: 100vw;
   @include mobile {
@@ -132,7 +136,7 @@
       &:before {
         content: '';
         position: absolute;
-        top: 0;
+        top: -10px;
         left: 0;
         @include sprite('arrow-down');
       }
@@ -140,8 +144,8 @@
 
     color: #777777;
     display: inline-block;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 14px;
+    line-height: 22px;
     letter-spacing: 0.01em;
     @include helveticaNeueCur-roman;
 
@@ -163,7 +167,7 @@
   padding-left: 35px;
   position: fixed;
 
-  height: 80px;
+  height: 66px;
  
   width: 100%;
   bottom: 0;
@@ -202,6 +206,8 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05em;
+
+   font-size: 14px;
 
     .active-section {
       color: #222222;

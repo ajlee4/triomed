@@ -6,16 +6,20 @@
   &:before {
     content: '';
     position: absolute;
-    bottom: 80px;
+    bottom: 66px;
     right: 0;
     background-image: url($images_dir+'diagnostic-bg.png');
     display: block;
     height: 620px;
     width: 660px;
+    @include desktop-medium {
+      height: 520px;
+      width: 555px;
+    }
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
-    padding-bottom: 80px;
+    padding-bottom: 66px;
   }
 
   .section {
@@ -48,6 +52,10 @@
       @include helveticaNeueCur-roman;
       color: #222222;
       max-width: 70%;
+      @include desktop-medium {
+        font-size: 15px;
+        max-width: 80%;
+      }
 
       p {
         margin-bottom: 7px;
@@ -64,16 +72,26 @@
         @include helveticaNeueCur-roman;
         display: inline-block;
         margin-bottom: 10px;
+        @include desktop-medium {
+          margin-bottom: 0;
+        }
       }
 
       .price {
         margin-top: 20px;
+        @include desktop-medium {
+          margin-top: 10px;
+        }
 
         .big {
           font-size: 32px;
           line-height: 48px;
           color: #222222;
           @include helveticaNeueCur-medium;
+          @include desktop-medium {
+            font-size: 24px;
+            line-height: 30px;
+          }
         }
 
         .tooltip {
@@ -131,25 +149,35 @@
 
     &__title {
       margin-bottom: 50px;
+      @include desktop-medium {
+        margin-bottom: 40px;
+      }
     }
 
     &__info {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 15px;
+      line-height: 19px;
       color: #222222;
+      @include helveticaNeueCur-roman;
       .advantages {
         margin-top: 50px;
         display: flex;
         padding: 15px;
         border: 1px dashed #222222;
         justify-content: space-between;
+        @include desktop-medium {
+          margin-top: 30px;
+        }
         &__item {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           position: relative;
           z-index: 99;
+          cursor: pointer;
           span {
+            margin-left: 8px;
             max-width: 100px;
+            padding-top: 7px;
           }
 
           &:hover {
@@ -166,7 +194,7 @@
           .tooltip {
             box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.06);
             width: 250px;
-            padding: 10px;
+            padding: 15px;
             border-radius: 4px;
             position: absolute;
             bottom: 100%;
@@ -175,6 +203,10 @@
             background-color: #fff;
             visibility: hidden;
             opacity: 0;
+            font-size: 14px;
+            line-height: 21px;
+            color: #777777;
+           
           }
         }
       }
@@ -186,7 +218,9 @@
       width: 70%;
       list-style: none;
       margin-bottom: 50px;
-
+       @include desktop-medium {
+         margin-bottom: 30px;
+       }
       &__item {
         margin-bottom: 15px;
         position: relative;
@@ -203,7 +237,7 @@
         font-size: 16px;
         line-height: 24px;
         color: #222222;
-
+        @include helveticaNeueCur-roman;
         .title {
           position: relative;
         }
@@ -255,6 +289,7 @@
 
 .diagnostic-specialist {
   .section {
+
     &__inner {
       padding-top: 100px;
     }
@@ -267,9 +302,14 @@
   padding-bottom: 80px;
 
   .section {
+    &__title {
+      @include desktop-medium {
+        margin-bottom: 20px;
+      }
+    }
     &__top {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
     }
     &__inner {
       padding-top: 100px;
@@ -279,9 +319,16 @@
     }
 
     &__info {
-      margin-top: 20px;
+    
+    
+        margin-top: 0px;
+     
 
       p {
+        @include desktop-medium {
+          font-size: 15px;
+          line-height: 22px;
+        }
         margin-bottom: 10px;
         font-size: 16px;
         line-height: 24px;
@@ -311,10 +358,14 @@
 // DIAGNOSTIC-DETAIL
 
 .diagnostic-detail {
+  @include helveticaNeueCur-roman;
   .section {
     &__inner-wrap {
       max-width: 80%;
       position: static;
+      @include desktop-medium {
+        max-width: 95%;
+      }
       &.hidden {
         visibility: hidden;
         opacity: 0;
@@ -362,6 +413,10 @@
             position: relative;
             p {
               margin-bottom: 10px;
+              @include desktop-medium {
+                margin-bottom: 8px;
+                line-height: 20px;
+              }
             }
             .title {
               font-size: 16px;
@@ -407,6 +462,11 @@
         color: #222222;
         @include helveticaNeueCur-medium;
         margin-top: 15px;
+        @include desktop-medium {
+          margin-top: 8px;
+          font-size: 18px;
+
+        }
 
         .text {
           &:after {
@@ -421,6 +481,9 @@
 
     &__title {
       margin-bottom: 25px;
+      @include desktop-medium {
+        margin-bottom: 15px;
+      }
     }
   }
 }

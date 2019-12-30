@@ -44,6 +44,7 @@
                     line-height: 21px;
                     color: #222222;
                     font-weight: 600;
+                    margin-bottom: 3px;
                   }
                   &-proffesion {
                     font-size: 14px;
@@ -87,7 +88,7 @@
           }
         }
         .reviews-form {
-          display: none;
+        
 
           &.visible {
             display: flex;
