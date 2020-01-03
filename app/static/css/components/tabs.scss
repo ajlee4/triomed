@@ -3,6 +3,9 @@ position: relative;
     &__header {
         display: flex;
         margin-bottom: 50px;
+        @include desktop-medium {
+            margin-bottom: 25px;
+        }
         .tab {
             @include helveticaNeueCur-roman;
             font-size: 18px;

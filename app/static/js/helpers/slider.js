@@ -54,7 +54,7 @@ $(document).ready(function() {
 
   $('#reason-slider').slick(
     {
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 1,
       infinite: true,
 
@@ -108,6 +108,7 @@ $(document).ready(function() {
     {
       slidesToShow: 1,
       slidesToScroll: 1,
+      infinite:false,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
     },

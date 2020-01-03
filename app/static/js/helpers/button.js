@@ -96,4 +96,5 @@ $(document).ready(function() {
 
     $('.tabs-content').show();
   });
+
 });

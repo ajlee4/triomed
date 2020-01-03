@@ -1,4 +1,5 @@
-"use strict";
+
+    "use strict";
 var tab; 
 var tabContent;
 
@@ -12,7 +13,7 @@ $(document).ready(function() {
   
 
 
-document.getElementById('tabs').onclick= function (event) {
+$(document).on('click',function (event) {
     var target=event.target;
     if (target.className=='tab') {
        for (var i=0; i<tab.length; i++) {
@@ -24,7 +25,7 @@ document.getElementById('tabs').onclick= function (event) {
            }
        }
     }
-}
+})
 
 function hideTabsContent(a) {
     for (var i=a; i<tabContent.length; i++) {

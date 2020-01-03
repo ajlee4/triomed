@@ -9,10 +9,21 @@
                     &__title {
                         margin-bottom: 20px;
                     }
+                    &__info {
+                        @include desktop-medium {
+                            p {
+                                line-height: 19px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
                 }
                 .image-group {
                     display: flex;
                     padding-bottom: 30px;
+                    @include desktop-medium {
+                        padding-bottom: 15px;
+                    }
                     .text {
                         margin-bottom: 5px;
                     }
@@ -26,6 +37,9 @@
 
                     p {
                         margin-bottom: 10px;
+                        @include desktop-medium {
+                            margin-bottom: 8px;
+                        }
                         &:last-child {
                             margin-bottom: 0;
                         }

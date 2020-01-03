@@ -106,6 +106,13 @@
                     }
                 }
             }
+            &.about-page-tour {
+                .section {
+                    &__title {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
         }
     }
 }

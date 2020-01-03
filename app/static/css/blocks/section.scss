@@ -37,7 +37,7 @@
 
   &.section-about {
     height: 100vh;
-
+ 
     position: relative;
 
     @include mobile {
@@ -87,7 +87,7 @@
         .card {
           position: absolute;
 
-          top: 215px;
+          top: 200px;
           right: 43px;
 
           @include mobile {
@@ -163,6 +163,9 @@
       line-height: 37px;
       color: #222222;
       margin-bottom: 15px;
+      @include desktop-medium {
+        font-size: 30px;
+      }
     }
 
     h3 {
@@ -177,6 +180,13 @@
       line-height: 24px;
       margin-bottom: 7px;
       @include helveticaNeueCur-roman;
+      @include desktop-medium {
+        font-size: 15px;
+        line-height: 21px;
+      }
+    }
+    b {
+      @include helveticaNeueCur-medium;
     }
     .mobile-section__info {
       display: none;
@@ -223,6 +233,10 @@
         @include mobile {
           margin-bottom: 30px;
         }
+        @include desktop-medium {
+          font-size: 18px;
+          line-height: 21px;
+        }
         span {
           position: relative;
 
@@ -255,6 +269,9 @@
           visibility: visible;
           opacity: 1;
           transition: 0.5s;
+          @include desktop-medium {
+            margin-right: 10px;
+          }
         }
 
         .bonus {
@@ -306,6 +323,9 @@
         text-align: center;
         color: #222222;
         margin-bottom: 30px;
+        @include desktop-medium {
+          margin-bottom: 15px;
+        }
       }
     }
 
@@ -374,6 +394,9 @@
             img {
               max-width: 114px;
               max-height: 118px;
+              @include desktop-medium {
+                max-width: 100px;
+              }
             }
           }
 
@@ -446,7 +469,9 @@
               img {
                 max-width: 124px;
                 max-height: 135px;
-             
+             @include desktop-medium {
+               max-width: 100px;
+             }
               }
             }
           }
@@ -700,6 +725,9 @@
       position: absolute;
       right: 53px;
       top: 220px;
+      @include desktop-medium {
+        top: 200px;
+      }
       @include mobile {
         display: none;
       }
@@ -726,6 +754,9 @@
         @include sprite('arrow-down-left');
         @include mobile {
           display: none;
+        }
+        @include desktop-medium {
+          margin-top: 10px;
         }
       }
 
@@ -764,7 +795,7 @@
 
     .worker-group {
       position: absolute;
-      top: 180px;
+      top: 165px;
       right: 338px;
       border: 1px dashed #222222;
       padding-top: 10px;
@@ -774,6 +805,7 @@
       @include desktop-medium {
         padding-top: 5px;
         padding-bottom: 5px;
+        top: 150px;
       }
       @include mobile {
         display: none;
@@ -831,7 +863,7 @@
 
       img {
         max-width: 105px;
-        max-height: 120px !important;
+        max-height: 120px;
       }
 
       .worker {
@@ -865,7 +897,7 @@
       align-items: flex-start;
       border: 1px dashed #222222;
       @include desktop-medium {
-        top: 370px;
+        top: 335px;
       }
       @include mobile {
         display: flex;
@@ -926,6 +958,10 @@
         color: #222222;
         @include helveticaNeueCur-medium;
         margin-bottom: 40px;
+        max-width: 60%;
+        @include desktop-medium {
+          margin-bottom: 20px;
+        }
         @include mobile {
           font-size: 24px;
           line-height: 34px;
@@ -934,15 +970,21 @@
       }
 
       &__info {
-        max-width: 450px;
+       display: flex;
+       justify-content: space-between;
       }
 
       &__text {
+        max-width: 60%;
         font-size: 16px;
         line-height: 24px;
         color: #222222;
         @include helveticaNeueCur-roman;
-
+        @include desktop-medium {
+         p {
+          margin-bottom: 8px;
+         }
+        }
         b {
           @include helveticaNeueCur-medium;
         }
@@ -952,6 +994,10 @@
         margin-top: 30px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        @include desktop-medium {
+          margin-top: 10px;
+        }
         @include mobile {
           display: block;
         }

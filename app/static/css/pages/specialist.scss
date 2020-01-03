@@ -15,12 +15,19 @@
             .section {
                 &__title {
                     margin-bottom: 40px;
+                    @include desktop-medium {
+                        margin-bottom: 20px;
+                    }
                 }
                 &__info {
                  font-size: 18px;
                  line-height: 27px;
                  color: #222222;
                  @include helveticaNeueCur-roman;
+                 @include desktop-medium {
+                     font-size: 16px;
+                     line-height: 24px;
+                 }
                 }
             }
             .specialist {
@@ -54,6 +61,25 @@
                                transition: 0.3s;
                            }
                        }
+                    }
+                }
+                &-quote {
+                   width: 350px;
+                    height: 110px;
+                     background-image: url($images_dir+'border.png');
+                     background-size: cover;
+                     background-repeat: no-repeat;
+                     
+                    .text {
+                       padding: 10px;
+                        width: 287px;
+                        position: relative;
+                        top: 15px;
+                        left: 30px;
+                      
+                        @include helveticaNeueCur-roman;
+                        font-size: 16px;
+                        line-height: 22px;
                     }
                 }
             }
@@ -98,6 +124,10 @@
                 color: #222222;
                 @include helveticaNeueCur-roman;
                 margin-bottom: 10px;
+                @include desktop-medium {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
             }
             b {
                  font-size: 20px;
@@ -114,8 +144,14 @@
                 .bottom-left {
                  max-width: 70%;
                 }
-                .more {
-                    display: none;  
+                .text {
+             
+              display: none;
+                }
+                .specialist-qualification-more {
+                      @include helveticaNeueCur-roman;
+                      color: #777777;
+                      cursor: pointer;
                 }
                 .bottom-right {
                     padding-left: 80px;
@@ -134,6 +170,9 @@
     .section {
         &__title {
             margin-bottom: 20px;
+            @include desktop-medium {
+                margin-bottom: 10px;
+            }
         }
         &__inner {
             padding-right: 100px;
@@ -153,6 +192,11 @@
         
             p {
                 margin-bottom: 10px;
+                @include desktop-medium {
+                    margin-bottom: 8px;
+                    line-height: 22px;
+                    font-size: 14px;
+                }
             }
             .subtitle {
                 font-size: 20px;

@@ -2,6 +2,7 @@
 
 .implantation-desc {
   background: radial-gradient(113.74% 99.6% at -14.15% 0.53%, #f9f9f9 0%, #dfdfdf 100%);
+
   position: relative;
   @include helveticaNeueCur-roman;
   &:before {
@@ -17,6 +18,9 @@
     background-position: top right;
     background-size: cover;
     padding-bottom: 80px;
+    @include desktop-medium {
+    bottom: 65px;
+    }
   }
   .section {
     &__inner {
@@ -45,8 +49,8 @@
         line-height: 24px;
         @include helveticaNeueCur-roman;
         @include desktop-medium {
-          font-size: 15px;
-          line-height: 21px;
+          font-size: 14px;
+          line-height: 20px;
         }
       }
       b{ 
@@ -64,6 +68,7 @@
 // IMPLANTATION PRICE
 
 .implantation-price {
+  overflow: visible;
   .section {
     &__title {
       margin-bottom: 10px;
@@ -79,12 +84,15 @@
       margin-bottom: 50px;
       max-width: 70%;
    @include desktop-medium {
-     margin-bottom: 20px;
+     margin-bottom: 15px;
    }
       &__item {
         margin-bottom: 15px;
         position: relative;
         padding-right: 50px;
+        @include desktop-medium {
+          margin-bottom: 10px;
+        }
         cursor: pointer;
         .item-info {
           font-size: 14px;
@@ -92,6 +100,9 @@
           @include helveticaNeueCur-roman;
           color: #222222;
           margin-top: 5px;
+          @include desktop-medium {
+            line-height: 19px;
+          }
         }
         &:last-child {
           margin-bottom: 0;
@@ -135,7 +146,11 @@
         font-size: 20px;
         line-height: 30px;
         color: #222222;
-
+       @include helveticaNeueCur-roman;
+       @include desktop-medium {
+         font-size: 18px;
+         line-height: 26px;
+       }
         &:hover {
           text-decoration: underline;
         }
@@ -161,6 +176,7 @@
       align-items: center;
       position: relative;
       z-index: 99;
+      cursor: pointer;
       span {
         max-width: 100px;
       }
@@ -179,7 +195,7 @@
       .tooltip {
         box-shadow: 0 2px 19px 0 rgba(0, 0, 0, 0.06);
         width: 250px;
-        padding: 10px;
+        padding: 15px;
         border-radius: 4px;
         position: absolute;
         bottom: 100%;
@@ -188,6 +204,9 @@
         background-color: #fff;
         visibility: hidden;
         opacity: 0;
+        font-size: 14px;
+        line-height: 21px;
+        color: #777777;
       }
     }
   }
@@ -211,6 +230,9 @@
         line-height: 24px;
         color: #222222;
         @include helveticaNeueCur-roman;
+        @include desktop-medium {
+          margin-bottom: 6px;
+        }
       }
 
       b {
@@ -251,6 +273,12 @@
       line-height: 24px;
       color: #222222;
       @include helveticaNeueCur-roman;
+      @include desktop-medium {
+        p {
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
       b {
         @include helveticaNeueCur-medium;
       }

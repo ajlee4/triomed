@@ -55,24 +55,40 @@
           .section {
               &__title {
                   margin-bottom: 20px;
-
+               @include desktop-medium {
+                 margin-bottom: 10px;
+               }
               }
               &__subtitle {
                   font-size: 16px;
                   line-height: 24px;
                   @include helveticaNeueCur-roman;
                   margin-bottom: 20px;
+                  @include desktop-medium {
+                    margin-bottom: 10px;
+                  }
               }
               &__info {
                   margin-bottom: 20px;
+                  @include desktop-medium {
+                    margin-bottom: 10px;
+                  }
                   .task__row {
                   margin-left: -10px;
                   margin-right: -10px;
                   align-items: stretch;
+                  @include desktop-medium {
+                  margin-left: -5px;
+                  margin-right: -5px;
+                  }
                   }
                   .task__col {
                       padding-left: 10px;
                       padding-right: 10px;
+                      @include desktop-medium {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                      }
                       &-inner {
                           padding: 10px 15px;
                           border: 1px dashed #222222;
@@ -88,12 +104,19 @@
                       .col__list {
                           list-style: disc outside;
                           padding-left: 10px;
+                          @include desktop-medium {
+                            padding-left: 5px;
+                          }
                           .list__item {
                               font-size: 14px;
                               line-height: 22px;
                               @include helveticaNeueCur-roman;
                               color: #222222;
                               margin-bottom: 10px;
+                              @include desktop-medium {
+                                line-height: 20px;
+                                margin-bottom: 8px;
+                              }
                               &:last-child {
                                   margin-bottom: 0;
                               }
@@ -123,6 +146,9 @@
                       @include helveticaNeueCur-roman;
                       &.text-padding {
                           padding-left: 20px;
+                      }
+                      @include desktop-medium {
+                        margin-bottom: 10px;
                       }
                   }
                   b {

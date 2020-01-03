@@ -50,7 +50,7 @@
                     font-size: 14px;
                     line-height: 18px;
                     color: #777777;
-                    margin-bottom: 15px;
+                    margin-bottom: 8px;
                   }
                   &-text {
                     display: flex;
@@ -61,6 +61,15 @@
                     .item-text-icon {
                       display: block;
                       padding-right: 10px;
+                    }
+                  }
+                  &-date {
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #777777;
+                    margin-bottom: 15px;
+                    @include desktop-medium {
+                      margin-bottom: 8px;
                     }
                   }
                 }

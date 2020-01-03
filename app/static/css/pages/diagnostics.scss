@@ -137,7 +137,9 @@
 // DIAGNOSTIC-PRICE
 
 .diagnostic-price {
+  overflow: visible;
   .section {
+ 
     &__inner {
       padding-top: 100px;
 
@@ -189,6 +191,7 @@
               visibility: visible;
               opacity: 1;
               transition: 0.3s;
+          
             }
           }
           .tooltip {
@@ -199,7 +202,7 @@
             position: absolute;
             bottom: 100%;
             left: 70%;
-            z-index: 9999;
+            z-index: 5000;
             background-color: #fff;
             visibility: hidden;
             opacity: 0;
@@ -225,13 +228,6 @@
         margin-bottom: 15px;
         position: relative;
         padding-right: 50px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      &__link {
         display: flex;
         justify-content: space-between;
         font-size: 16px;
@@ -280,7 +276,12 @@
         .price {
           white-space: nowrap;
         }
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
+
+    
     }
   }
 }
@@ -300,7 +301,7 @@
 
 .diagnostic-portfolio {
   padding-bottom: 80px;
-
+overflow: hidden;
   .section {
     &__title {
       @include desktop-medium {
@@ -326,8 +327,9 @@
 
       p {
         @include desktop-medium {
-          font-size: 15px;
-          line-height: 22px;
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 8px;
         }
         margin-bottom: 10px;
         font-size: 16px;
@@ -406,6 +408,9 @@
             color: #222222;
             @include helveticaNeueCur-roman;
             margin-bottom: 20px;
+            @include desktop-medium {
+              margin-bottom: 10px;
+            }
           }
           &__info {
             display: flex;
@@ -427,6 +432,9 @@
             &-right,
             &-left {
               padding: 20px;
+              @include desktop-medium {
+                padding: 10px;
+              }
             }
             &-left {
               border-right: 1px dashed #222222;
@@ -438,12 +446,15 @@
               color: #777777;
               @include helveticaNeueCur-roman;
               z-index: 9999;
+              display: flex;
+              align-items: center;
               &:hover {
                 text-decoration: underline;
               }
               &:before {
                 content: '';
                 @include sprite('diagnostic-detail-arrow-left');
+                margin-right: 10px;
               }
             }
           }

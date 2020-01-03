@@ -16,6 +16,10 @@
           .services {
               &__col {
                   padding-left: 50px;
+                  &.center {
+                      display: flex;
+                      align-items: center;
+                  }
                   &-title {
                       font-size: 20px;
                       line-height: 24px;
@@ -26,7 +30,11 @@
                           margin-bottom: 10px;
                           display: inline-block;
                           &:hover {
+                              svg {
+                                  fill: #C8102E;;
+                              }
                               color: #C8102E;
+                              transition: 0s;
                           }
                          svg {
                             position: absolute;
@@ -35,6 +43,10 @@
                             margin-right: 10px;
                          
                             display: inline-block;
+                         }
+                         @include desktop-medium {
+                             font-size: 18px;
+                             line-height: 20px;
                          }
                   }
                   &-info {
@@ -45,6 +57,9 @@
                           color: #000000;
                           @include helveticaNeueCur-roman;
                           margin-bottom: 5px;
+                          @include desktop-medium {
+                              line-height: 15px;
+                          }
                           &:last-child {
                               margin-bottom: 0;
                           }
@@ -54,6 +69,10 @@
               &__row {
                   margin-bottom: 30px;
                   justify-content: space-between;
+                  @include desktop-medium {
+                      margin-bottom: 10px;
+                      
+                  }
                   &:last-child {
                       margin-bottom: 0;
                   }

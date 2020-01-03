@@ -9,9 +9,24 @@
             overflow: hidden;
             &__title {
                 margin-bottom: 30px;
+                @include desktop-medium {
+                    margin-bottom: 10px;
+                }
             }
             &__inner {
                 padding-right: 64px;
+            }
+            &__result {
+                @include helveticaNeueCur-roman;
+                font-size: 14px;
+                line-height: 19px;
+                color: #777777;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
             }
             &__info {
                 &-top {

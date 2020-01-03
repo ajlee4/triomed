@@ -7,7 +7,7 @@
             <li class="breadcrumbs__item"><a href="home.html" class="breadcrumbs__link">Главная</a></li>
             <li class="breadcrumbs__item "><a href="services.html" class="breadcrumbs__link ">Услуги</a>
             </li>
-            <li class="breadcrumbs__item "><a href="" class="breadcrumbs__link active">Имплантация</a></li>
+            <li class="breadcrumbs__item "><a href="" class="breadcrumbs__link active" >Имплантация</a></li>
         </ul>
     </div>
 
@@ -34,7 +34,7 @@
                             ткани</p>
                         <p><b>В TRIOMED решения об имплантации принимает консилиум врачей: терапевт, ортопед, ортодонт,
                                 хирург-имплантолог – процедура пройдет безопасно и даст долгосрочный результат</b></p>
-                        <a href="" class="btn main-btn"><span>Записаться на бесплатную консультацию</span></a>
+                        <a href="" class="btn main-btn" data-popup="footer-popup"><span>Записаться на бесплатную консультацию</span></a>
                     </div>
                 </div>
 
@@ -129,6 +129,8 @@
                         </svg>
 
                         <span>Командная работа</span>
+                         <div class="tooltip">Рассказываем о лечении зубов. Выдаём на руки документы и снимки. Мы за
+                            доверие.</div>
                     </li>
                     <li class="advantages__item">
                         <svg width="42" height="39" viewBox="0 0 42 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,6 +144,8 @@
 
 
                         <span>Гарантия</span>
+                         <div class="tooltip">Рассказываем о лечении зубов. Выдаём на руки документы и снимки. Мы за
+                            доверие.</div>
                     </li>
                     <li class="advantages__item">
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,6 +160,8 @@
 
 
                         <span>Долгосрочный результат</span>
+                         <div class="tooltip">Рассказываем о лечении зубов. Выдаём на руки документы и снимки. Мы за
+                            доверие.</div>
                     </li>
                     <li class="advantages__item">
                         <svg width="43" height="42" viewBox="0 0 43 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,6 +180,8 @@
 
 
                         <span>Атмосфера</span>
+                         <div class="tooltip">Рассказываем о лечении зубов. Выдаём на руки документы и снимки. Мы за
+                            доверие.</div>
                     </li>
                 </ul>
             </div>
@@ -318,61 +326,89 @@
                 <h2 class="section__title">
                     Портфолио
                 </h2>
-                <div class="slider slider-portfolio">
-                    <div class="slider-portfolio__inner" id="specialist-portfolio">
-                        <div class="slider__item">
-                            <div class="slider__item-img before">
-                                <div class="text">До</div>
-                                <img src="../static/images/portfolio-before.jpg " alt=""
-                                    class="img grayscale grayscale-fade">
-                            </div>
-                            <div class="slider__item-img after">
-                                <div class="text">После</div>
-                                <img src="../static/images/portfolio-after.jpg" alt=""
-                                    class="img grayscale grayscale-fade">
-                            </div>
-                        </div>
-                        <div class="slider__item">
-                            <div class="slider__item-img before">
-                                <div class="text">До</div>
-                                <img src="../static/images/portfolio-before.jpg " alt=""
-                                    class="img grayscale grayscale-fade">
-                            </div>
-                            <div class="slider__item-img after">
-                                <div class="text">После</div>
-                                <img src="../static/images/portfolio-after.jpg" alt=""
-                                    class="img grayscale grayscale-fade">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-arrow">
-                        <div class="prev-arrow">
-                            <svg width="45" height="8" viewBox="0 0 45 8" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M-0.000183432 3.76486L2.77314 0.000121459L4.26706 0.000121328L2.00983 3.14013L44.8711 3.14013L44.8711 4.37601L2.00983 4.37602L4.26706 7.50244L2.77314 7.50245L-0.000183432 3.76486Z" />
-                            </svg>
+      <div class="slider slider-portfolio">
+                        <div class="slider-portfolio__inner" id="diagnostic-port">
+                            <div class="slider__item">
+                                <div class="slider__item-top">
+                                    <div class="slider__item-img before">
+                                        <div class="text">До</div>
+                                        <img src="../static/images/portfolio-before.jpg " alt=""
+                                            class="img grayscale grayscale-fade">
+                                    </div>
+                                    <div class="slider__item-img after">
+                                        <div class="text">После</div>
+                                        <img src="../static/images/portfolio-after.jpg" alt=""
+                                            class="img grayscale grayscale-fade">
+                                    </div>
+                                </div>
+                                <div class="slider__item-bottom">
+                                    <div class="section__info">
+                                        <p class="subtitle"><b>Имплантация</b></p>
+                                        <p><b>До: </b>частичное отсутствие зубов на нижней челюсти, не эстетическое
+                                            состояние
+                                            металлокерамических коронок на верхней челюсти</p>
+                                        <p><b>После: </b>цельнокерамические коронки на основе диоксида циркония на
+                                            имплантах Astra Tech в
+                                            области 1.6, 1.5. 2.4, 2.5, 2.6, 3.6, 3.4, 4.4, 4.6 зубов,
+                                            цельнокерамические коронки на основе
+                                            диоксида циркония на зубах 1.7, 1.3, 1.2, 1.1 2.1 2.2 2.3, 3.3, 4.3</p>
+                                        <div class="doctor-info-text">
+                                            <p>Специалист: Андриенко Екатерина Арсеньевна</p>
+                                            <p>Специализация: Имплантация</p>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="slider__item">
+                                <div class="slider__item-top">
+                                    <div class="slider__item-img before">
+                                        <div class="text">До</div>
+                                        <img src="../static/images/portfolio-before.jpg " alt=""
+                                            class="img grayscale grayscale-fade">
+                                    </div>
+                                    <div class="slider__item-img after">
+                                        <div class="text">После</div>
+                                        <img src="../static/images/portfolio-after.jpg" alt=""
+                                            class="img grayscale grayscale-fade">
+                                    </div>
+                                </div>
+                                <div class="slider__item-bottom">
+                                    <div class="section__info">
+                                        <p class="subtitle"><b>Другая процедура</b></p>
+                                        <p><b>До: </b>частичное отсутствие зубов на нижней челюсти, не эстетическое
+                                            состояние
+                                            металлокерамических коронок на верхней челюсти</p>
+                                        <p><b>После: </b>цельнокерамические коронки на основе диоксида циркония на
+                                            имплантах Astra Tech в
+                                            области 1.6, 1.5. 2.4, 2.5, 2.6, 3.6, 3.4, 4.4, 4.6 зубов,
+                                            цельнокерамические коронки на основе
+                                            диоксида циркония на зубах 1.7, 1.3, 1.2, 1.1 2.1 2.2 2.3, 3.3, 4.3</p>
+                                        <div class="doctor-info-text">
+                                            <p>Специалист: Андриенко Екатерина Арсеньевна</p>
+                                            <p>Специализация: Имплантация</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="next-arrow">
-                            <svg width="46" height="8" viewBox="0 0 46 8" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M45.3469 3.73758L42.5735 7.50232H41.0796L43.3369 4.36231H0.475586V3.12643H43.3369L41.0796 0H42.5735L45.3469 3.73758Z" />
-                            </svg>
+                        <div class="slider-arrow">
+                            <div class="prev-arrow">
+                                <svg width="45" height="8" viewBox="0 0 45 8" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M-0.000183432 3.76486L2.77314 0.000121459L4.26706 0.000121328L2.00983 3.14013L44.8711 3.14013L44.8711 4.37601L2.00983 4.37602L4.26706 7.50244L2.77314 7.50245L-0.000183432 3.76486Z" />
+                                </svg>
+
+                            </div>
+                            <div class="next-arrow">
+                                <svg width="46" height="8" viewBox="0 0 46 8" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M45.3469 3.73758L42.5735 7.50232H41.0796L43.3369 4.36231H0.475586V3.12643H43.3369L41.0796 0H42.5735L45.3469 3.73758Z" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="section__info">
-                    <p class="subtitle"><b>Имплантация</b></p>
-                    <p><b>До: </b>частичное отсутствие зубов на нижней челюсти, не эстетическое состояние
-                        металлокерамических коронок на верхней челюсти</p>
-                    <p><b>После: </b>цельнокерамические коронки на основе диоксида циркония на имплантах Astra Tech в
-                        области 1.6, 1.5. 2.4, 2.5, 2.6, 3.6, 3.4, 4.4, 4.6 зубов, цельнокерамические коронки на основе
-                        диоксида циркония на зубах 1.7, 1.3, 1.2, 1.1 2.1 2.2 2.3, 3.3, 4.3</p>
-                    <div class="doctor-info-text">
-                        <p>Специалист: Андриенко Екатерина Арсеньевна</p>
-                        <p>Специализация: Имплантация</p>
-                    </div>
-                </div>
             </div>
             <div class="logo"><img src="../static/images/logo-about.png" alt=""></div>
         </section>
