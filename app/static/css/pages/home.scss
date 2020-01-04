@@ -2,6 +2,9 @@
   background-color: #f2f2f2;
   position: relative;
   height: 100vh;
+  @include mobile {
+    height: auto;
+  }
 }
 
 .main {
@@ -49,15 +52,19 @@
     @include mobile {
       padding-top: 76px;
       padding-bottom: 0;
+      height: auto;
     }
     .section__inner {
       padding-right: 170px;
       padding-left: 170px;
       text-align: center;
-
+       @include mobileS {
+         padding-bottom: 50px;
+       }
       @include mobile {
         padding-left: 15px;
         padding-right: 15px;
+     
       }
     }
 
@@ -78,6 +85,9 @@
           line-height: 39px;
           margin-bottom: 46px;
         }
+        @include mobileS {
+          margin-bottom: 20px;
+        }
       }
 
       &__info {
@@ -91,6 +101,10 @@
           padding-left: 20px;
           padding-right: 20px;
           margin-bottom: 74px;
+        }
+        @include mobileS {
+          padding-left: 0;
+          padding-right: 0;
         }
       }
     }

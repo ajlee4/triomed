@@ -1,9 +1,15 @@
 .content {
   &.blog-single {
+    @include mobile {
+      padding-top: 76px;
+    }
     .section {
       &__inner {
         padding-right: 64px;
         padding-bottom: 20px;
+        @include mobile {
+          padding-right: 15px;
+        }
       }
       &.blog-single-main {
         @include desktop-large {
@@ -30,6 +36,10 @@
             @include helveticaNeueCur-roman;
             display: flex;
             margin-bottom: 60px;
+            @include mobile {
+              flex-direction: column-reverse;
+              margin-bottom: 10px;
+            }
             @include desktop-large {
               margin-bottom: 30px;
             }
@@ -39,6 +49,10 @@
             &-left {
               max-width: 70%;
               padding-right: 40px;
+              @include mobile {
+                max-width: 100%;
+                padding-right: 0;
+              }
               p {
                 @include desktop-medium {
                   margin-bottom: 12px;
@@ -55,6 +69,10 @@
             &-right {
               max-width: 40%;
               flex: 1;
+              @include mobile {
+                max-width: 100%;
+                margin-bottom: 20px;
+              }
               img {
                 width: 100%;
               }

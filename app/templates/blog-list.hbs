@@ -1,131 +1,158 @@
 {{!Блог-список}}
 
 {{> layout/header}}
-<div class="content blog-list">
+<div class="content blog-list" id="blog-list">
     <div class="container">
         <ul class="breadcrumbs">
             <li class="breadcrumbs__item"><a href="home.html" class="breadcrumbs__link">Главная</a></li>
             <li class="breadcrumbs__item "><a href="#" class="breadcrumbs__link active">Блог</a>
+            <li class="breadcrumbs__item mobile"><a href="#" class="breadcrumbs__link active"><svg width="34" height="6"
+                        viewBox="0 0 34 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M-2.61319e-07 3.01086L2.10141 4.04477e-07L3.23339 3.05516e-07L1.52303 2.51123L34 2.51123L34 3.49963L1.52303 3.49963L3.23339 6L2.10141 6L-2.61319e-07 3.01086Z"
+                            fill="#777777" />
+                    </svg>Главная</a>
             </li>
 
         </ul>
         <section class="section blog-list-main">
             <div class="section__inner">
                 <h2 class="section__title">
-                 Блог
+                    Блог
                 </h2>
                 <div class="blog-select">
-                     <select class="custom-select" placeholder="Выберите тему">
-                            <option value="Категория 1">Категория 1</option>
-                            <option value="Категория 2">Категория 2</option>
-                            <option value="Категория 3">Категория 3</option>
-                        </select>
-                        <div class="result-field">Всего публикаций: <span class="result">6</span></div>
+                    <select class="custom-select" placeholder="Выберите тему">
+                        <option value="Категория 1">Категория 1</option>
+                        <option value="Категория 2">Категория 2</option>
+                        <option value="Категория 3">Категория 3</option>
+                    </select>
+                    <div class="result-field">Всего публикаций: <span class="result">6</span></div>
                 </div>
-          
-            <div class="section__info">
-               <div class="slider blog-list-slider">
-                   <div class="slider__inner" id="blog-list-slider">
-                    <div class="slider__item">
-                            <div class="row blog-list__row">
-                    <div class="col-md-4 blog-list__col">
-                        <div class="col__img">
-                          <img src="../static/images/post1.png" alt="" class="grayscale grayscale-fade">
+
+                <div class="section__info">
+                    <div class="slider blog-list-slider">
+                        <div class="slider__inner" id="blog-list-slider">
+                            <div class="slider__item">
+                                <div class="row blog-list__row">
+                                    <div class="col-md-4 blog-list__col">
+                                        <div class="col__img">
+                                            <img src="../static/images/post1.png" alt=""
+                                                class="grayscale grayscale-fade">
+                                        </div>
+                                        <div class="col__category">
+                                            Профгигиена
+                                        </div>
+                                        <a href="" class="col__title">Как заболевания зубов влияют на весь организм</a>
+                                        <div class="col__text">
+                                            Если вы регулярно откладываете посещение стоматолога «до лучших времен»,
+                                            вполне возможно, вскоре...
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 blog-list__col">
+                                        <div class="col__img">
+                                            <img src="../static/images/post2.png" alt=""
+                                                class="grayscale grayscale-fade">
+                                        </div>
+                                        <div class="col__category">
+                                            Имплантация
+                                        </div>
+                                        <a href="" class="col__title">Одноэтапная и двухэтапная имплантация зубов: мифы
+                                            и реальность</a>
+                                        <div class="col__text">
+                                            На стоматологических форумах с завидным постоянством появляются сообщения, в
+                                            которых утверждается...
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 blog-list__col">
+                                        <div class="col__img">
+                                            <img src="../static/images/post3.png" alt=""
+                                                class="grayscale grayscale-fade">
+                                        </div>
+                                        <div class="col__category">
+                                            Вопрос-ответ
+                                        </div>
+                                        <a href="" class="col__title">Что должно насторожить после лечения или удаления
+                                            зубов?</a>
+                                        <div class="col__text">
+                                            Главное правило – должна наблюдаться положительная динамика. С каждым днем
+                                            Вам...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider__item hide" id="blog-list-hide">
+                                <div class="row blog-list__row">
+                                    <div class="col-md-4 blog-list__col">
+                                        <div class="col__img">
+                                            <img src="../static/images/post1.png" alt=""
+                                                class="grayscale grayscale-fade">
+                                        </div>
+                                        <div class="col__category">
+                                            Профгигиена
+                                        </div>
+                                        <a href="" class="col__title">Как заболевания зубов влияют на весь организм</a>
+                                        <div class="col__text">
+                                            Если вы регулярно откладываете посещение стоматолога «до лучших времен»,
+                                            вполне возможно, вскоре...
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 blog-list__col">
+                                        <div class="col__img">
+                                            <img src="../static/images/post2.png" alt=""
+                                                class="grayscale grayscale-fade">
+                                        </div>
+                                        <div class="col__category">
+                                            Имплантация
+                                        </div>
+                                        <a href="" class="col__title">Одноэтапная и двухэтапная имплантация зубов: мифы
+                                            и реальность</a>
+                                        <div class="col__text">
+                                            На стоматологических форумах с завидным постоянством появляются сообщения, в
+                                            которых утверждается...
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 blog-list__col">
+                                        <div class="col__img">
+                                            <img src="../static/images/post3.png" alt=""
+                                                class="grayscale grayscale-fade">
+                                        </div>
+                                        <div class="col__category">
+                                            Вопрос-ответ
+                                        </div>
+                                        <a href="" class="col__title">Что должно насторожить после лечения или удаления
+                                            зубов?</a>
+                                        <div class="col__text">
+                                            Главное правило – должна наблюдаться положительная динамика. С каждым днем
+                                            Вам...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="col__category">
-                            Профгигиена
-                        </div>
-                        <a href="" class="col__title">Как заболевания зубов влияют на весь организм</a>
-                        <div class="col__text">
-                            Если вы регулярно откладываете посещение стоматолога «до лучших времен», вполне возможно, вскоре...
-                        </div>
-                    </div>
-                     <div class="col-md-4 blog-list__col">
-                        <div class="col__img">
-                          <img src="../static/images/post2.png" alt="" class="grayscale grayscale-fade">
-                        </div>
-                        <div class="col__category">
-                            Имплантация
-                        </div>
-                        <a href="" class="col__title">Одноэтапная и двухэтапная имплантация зубов: мифы и реальность</a>
-                        <div class="col__text">
-                            На стоматологических форумах с завидным постоянством появляются сообщения, в которых утверждается...
-                        </div>
-                    </div>
-                     <div class="col-md-4 blog-list__col">
-                        <div class="col__img">
-                          <img src="../static/images/post3.png" alt="" class="grayscale grayscale-fade">
-                        </div>
-                        <div class="col__category">
-                            Вопрос-ответ
-                        </div>
-                        <a href="" class="col__title">Что должно насторожить после лечения или удаления зубов?</a>
-                        <div class="col__text">
-                            Главное правило – должна наблюдаться положительная динамика. С каждым днем Вам...
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                      <div class="slider__item">
-                            <div class="row blog-list__row">
-                    <div class="col-md-4 blog-list__col">
-                        <div class="col__img">
-                          <img src="../static/images/post1.png" alt="" class="grayscale grayscale-fade">
-                        </div>
-                        <div class="col__category">
-                            Профгигиена
-                        </div>
-                        <a href="" class="col__title">Как заболевания зубов влияют на весь организм</a>
-                        <div class="col__text">
-                            Если вы регулярно откладываете посещение стоматолога «до лучших времен», вполне возможно, вскоре...
-                        </div>
-                    </div>
-                     <div class="col-md-4 blog-list__col">
-                        <div class="col__img">
-                          <img src="../static/images/post2.png" alt="" class="grayscale grayscale-fade">
-                        </div>
-                        <div class="col__category">
-                            Имплантация
-                        </div>
-                        <a href="" class="col__title">Одноэтапная и двухэтапная имплантация зубов: мифы и реальность</a>
-                        <div class="col__text">
-                            На стоматологических форумах с завидным постоянством появляются сообщения, в которых утверждается...
-                        </div>
-                    </div>
-                     <div class="col-md-4 blog-list__col">
-                        <div class="col__img">
-                          <img src="../static/images/post3.png" alt="" class="grayscale grayscale-fade">
-                        </div>
-                        <div class="col__category">
-                            Вопрос-ответ
-                        </div>
-                        <a href="" class="col__title">Что должно насторожить после лечения или удаления зубов?</a>
-                        <div class="col__text">
-                            Главное правило – должна наблюдаться положительная динамика. С каждым днем Вам...
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                   </div>
-                   <div class="slider-arrow">
-                        <div class="prev">
-                    <svg width="45" height="7" viewBox="0 0 45 7"  xmlns="http://www.w3.org/2000/svg">
-<path d="M5.30801e-05 3.51268L2.76395 7.2486e-06L4.25279 7.12674e-06L2.00323 2.92977L44.7187 2.92977L44.7187 4.08291L2.00323 4.08291L4.25279 7L2.76395 7L5.30801e-05 3.51268Z" />
-</svg>
+                        <div class="slider-arrow">
+                            <div class="prev">
+                                <svg width="45" height="7" viewBox="0 0 45 7" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.30801e-05 3.51268L2.76395 7.2486e-06L4.25279 7.12674e-06L2.00323 2.92977L44.7187 2.92977L44.7187 4.08291L2.00323 4.08291L4.25279 7L2.76395 7L5.30801e-05 3.51268Z" />
+                                </svg>
 
 
-                        </div>
-                        <div class="next">
-                         <svg width="45" height="7" viewBox="0 0 45 7"  xmlns="http://www.w3.org/2000/svg">
-<path d="M44.9999 3.48733L42.2361 7H40.7472L42.9968 4.07023H0.28125V2.91709H42.9968L40.7472 0H42.2361L44.9999 3.48733Z" />
-</svg>
+                            </div>
+                            <div class="next">
+                                <svg width="45" height="7" viewBox="0 0 45 7" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M44.9999 3.48733L42.2361 7H40.7472L42.9968 4.07023H0.28125V2.91709H42.9968L40.7472 0H42.2361L44.9999 3.48733Z" />
+                                </svg>
 
+                            </div>
                         </div>
+                        <button class="btn btn-gray" id="blog-list-btn-wrap">Показать еще</button>
                     </div>
-               </div>
+                </div>
             </div>
-              </div>
- <div class="logo"><img src="../static/images/logo-about.png" alt=""></div>
+            <div class="logo"><img src="../static/images/logo-about.png" alt=""></div>
 
         </section>
     </div>

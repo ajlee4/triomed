@@ -5,11 +5,16 @@ $(document).ready(function() {
     {
       slidesToShow: 3,
       slidesToScroll: 1,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
       infinite: true,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }]
     },
     $('.slider-specialist__inner').addClass('created'),
   );
@@ -18,8 +23,6 @@ $(document).ready(function() {
     {
       slidesToShow: 1,
       slidesToScroll: 1,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
       infinite: true,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
@@ -43,8 +46,7 @@ $(document).ready(function() {
     {
       slidesToShow: 1,
       slidesToScroll: 1,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
+  
       infinite: true,
       prevArrow: $('.prev-arrow'),
       nextArrow: $('.next-arrow'),
@@ -70,6 +72,11 @@ $(document).ready(function() {
       slidesToScroll: 1,
       prevArrow: $('.portfolio-prev'),
       nextArrow: $('.portfolio-next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
     },
     $('.portfolio-page-slider').addClass('created'),
   );
@@ -80,6 +87,11 @@ $(document).ready(function() {
       slidesToScroll: 1,
       prevArrow: $('.portfolio-prev'),
       nextArrow: $('.portfolio-next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
     },
     $('.specialist-list-slider').addClass('created'),
   );
@@ -100,6 +112,11 @@ $(document).ready(function() {
       slidesToScroll: 1,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
     },
     $('.blog-list-slider').addClass('created'),
   );
@@ -111,6 +128,11 @@ $(document).ready(function() {
       infinite:false,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
     },
     $('.blog-single-slider').addClass('created'),
   );
@@ -121,6 +143,11 @@ $(document).ready(function() {
       slidesToScroll: 1,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
     },
     $('.reviews-list-slider').addClass('created'),
   );
@@ -131,6 +158,11 @@ $(document).ready(function() {
       slidesToScroll: 1,
       prevArrow: $('.prev-video-slider'),
       nextArrow: $('.next-video-slider'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
     },
     $('.videoreviews-list-slider').addClass('created'),
   );

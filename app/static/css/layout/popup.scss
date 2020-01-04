@@ -26,11 +26,19 @@
       width: 590px;
       height: 380px;
       max-width: 100%;
+      @include mobile {
+        width: 300px;
+        border-radius: 15px;
+      }
     }
     &.footer-subpopup {
       width: 510px;
       height: 214px;
       max-width: 100%;
+      @include mobile {
+        width: 300px;
+        border-radius: 15px;
+      }
       .popup {
         &__info {
           display: flex;

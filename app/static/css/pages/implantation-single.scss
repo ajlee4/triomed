@@ -3,17 +3,31 @@
         .section {
             &__inner {
                 padding-right: 64px;
+                @include mobile {
+                    padding-right: 15px;
+                    padding-bottom: 30px;
+                }
             }
             &.implantation-single-main {
+                @include mobile {
+                    padding-top: 76px;
+                }
                 .section {
                     &__title {
                         margin-bottom: 20px;
                     }
                     &__info {
+                        @include mobile {
+                            p {
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                        }
                         @include desktop-medium {
                             p {
                                 line-height: 19px;
                                 margin-bottom: 8px;
+
                             }
                         }
                     }
@@ -21,11 +35,27 @@
                 .image-group {
                     display: flex;
                     padding-bottom: 30px;
+                   @include mobile {
+                    flex-direction: column;
+                    align-items: center;
+
+                   }
+                   .image-item {
+                       @include mobile {
+                           margin-bottom: 20px;
+                           &:last-child {
+                               margin-bottom: 0;
+                           }
+                       }
+                   }
                     @include desktop-medium {
                         padding-bottom: 15px;
                     }
                     .text {
                         margin-bottom: 5px;
+                        @include mobile {
+                            text-align: center;
+                        }
                     }
                 }
                 .doctor-info-text {

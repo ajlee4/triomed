@@ -3,10 +3,18 @@
         .section {
             &.specialist-list-main {
                 overflow: hidden;
+                @include mobile {
+                    padding-top: 76px;
+                    
+                }
              
                 .section {
                     &__inner {
                         padding-right: 54px;
+                        @include mobile {
+                            padding-right: 15px;
+                            padding-bottom: 30px;
+                        }
                     }
                     &__info-top {
                         margin-top: 15px;

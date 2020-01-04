@@ -31,6 +31,10 @@
     letter-spacing: 0.01em;
     color: #222222;
     @include helveticaNeueCur-medium;
+    @include mobile {
+      font-size: 26px;
+      line-height: 30px;
+    }
   }
 
   //  SECTION ABOUT
@@ -579,6 +583,9 @@
               right: -15px;
               top: 100%;
               margin-top: 60px;
+              @include mobile {
+                right: -25px;
+              }
               &__up {
                 margin-bottom: 20px;
               }
@@ -621,6 +628,9 @@
               margin-bottom: 3px;
               @include desktop-medium {
                 margin-bottom: 0;
+              }
+              @include mobile {
+                white-space: nowrap;
               }
             }
 
@@ -947,7 +957,7 @@
         @include mobile {
           padding-right: 15px;
           padding-top: 40px;
-          padding-bottom: 60px;
+          padding-bottom: 30px;
         }
       }
 
@@ -966,12 +976,19 @@
           font-size: 24px;
           line-height: 34px;
           margin-bottom: 15px;
+          max-width: 100%;
         }
       }
 
       &__info {
        display: flex;
        justify-content: space-between;
+       @include mobile {
+         flex-direction: column;
+         align-items: center;
+         position: relative;
+         padding-bottom: 50px;
+       }
       }
 
       &__text {
@@ -980,9 +997,16 @@
         line-height: 24px;
         color: #222222;
         @include helveticaNeueCur-roman;
+        @include mobile {
+          max-width: 100%;
+          p {
+            font-size: 16px;
+          }
+        }
         @include desktop-medium {
          p {
           margin-bottom: 8px;
+       
          }
         }
         b {
@@ -999,7 +1023,8 @@
           margin-top: 10px;
         }
         @include mobile {
-          display: block;
+          position: absolute;
+          bottom: 0;
         }
         &-text {
           font-size: 20px;

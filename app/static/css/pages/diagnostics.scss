@@ -3,6 +3,9 @@
 .diagnostic-desc {
   background: radial-gradient(113.74% 99.6% at -14.15% 0.53%, #f9f9f9 0%, #dfdfdf 100%);
   position: relative;
+  @include mobile {
+    padding-top: 76px;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -12,6 +15,17 @@
     display: block;
     height: 620px;
     width: 660px;
+    @include mobile {
+      width: 100%;
+    background-position: center;
+    background-size: contain;
+      height: 316px;
+      padding-bottom: 0;
+       top: 15%;
+      padding-left: 15px;
+      padding-right: 15px;
+ 
+    }
     @include desktop-medium {
       height: 520px;
       width: 555px;
@@ -28,10 +42,17 @@
 
       background-repeat: no-repeat;
       background-size: cover;
-
-      max-height: 100vh;
+ 
+  
+      @include mobile {
+       height: auto;
+       padding-bottom: 30px;
+      }
       &-wrap {
         max-width: 80%;
+        @include mobile {
+          max-width: 100%;
+        }
       }
       &:before {
         position: absolute;
@@ -44,6 +65,12 @@
 
     &__title {
       margin-bottom: 15px;
+      @include mobile {
+        margin-bottom: 300px;
+      }
+      @include mobileS {
+        margin-bottom: 270px;
+      }
     }
 
     &__info {
@@ -52,6 +79,10 @@
       @include helveticaNeueCur-roman;
       color: #222222;
       max-width: 70%;
+      @include mobile {
+        max-width: 100%;
+       
+      }
       @include desktop-medium {
         font-size: 15px;
         max-width: 80%;
@@ -59,6 +90,10 @@
 
       p {
         margin-bottom: 7px;
+        @include mobile {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
 
       b {
@@ -142,10 +177,15 @@
  
     &__inner {
       padding-top: 100px;
-
+@include mobile {
+  padding-top: 30px;
+}
       &-wrap {
         padding-right: 64px;
         width: 100%;
+        @include mobile {
+          padding-right: 0;
+        }
       }
     }
 
@@ -161,12 +201,21 @@
       line-height: 19px;
       color: #222222;
       @include helveticaNeueCur-roman;
+      @include mobile {
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
       .advantages {
         margin-top: 50px;
         display: flex;
         padding: 15px;
         border: 1px dashed #222222;
         justify-content: space-between;
+        @include mobile {
+          flex-direction:  column;
+        }
         @include desktop-medium {
           margin-top: 30px;
         }
@@ -175,11 +224,25 @@
           align-items: flex-start;
           position: relative;
           z-index: 99;
+          @include mobile {
+         
+            z-index: 10;
+            margin-bottom: 15px;
+      display: block;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
           cursor: pointer;
           span {
             margin-left: 8px;
             max-width: 100px;
             padding-top: 7px;
+            @include mobile {
+              padding-top: 0;
+              position: relative;
+              top: -15px;
+            }
           }
 
           &:hover {
@@ -209,7 +272,17 @@
             font-size: 14px;
             line-height: 21px;
             color: #777777;
-           
+           @include mobile {
+             width: 100%;
+             visibility: visible;
+             opacity: 1;
+             position: static;
+             box-shadow: none;
+             padding-top: 0px;
+             padding-bottom: 0px;
+             padding-left: 50px;
+             padding-right: 0;
+           }
           }
         }
       }
@@ -221,6 +294,10 @@
       width: 70%;
       list-style: none;
       margin-bottom: 50px;
+      @include mobile {
+        width: 100%;
+        margin-bottom: 20px;
+      }
        @include desktop-medium {
          margin-bottom: 30px;
        }
@@ -233,14 +310,26 @@
         font-size: 16px;
         line-height: 24px;
         color: #222222;
+        @include mobile {
+          padding-right: 0;
+       .price {
+         white-space: nowrap;
+       }
+        }
         @include helveticaNeueCur-roman;
         .title {
           position: relative;
+          @include mobile {
+            padding-right: 10px;
+          }
         }
         .quest-icon {
           position: relative;
           top: -5px;
           margin-left: 2px;
+          @include mobile {
+            display: none;
+          }
           &:hover {
             + .tooltip {
               visibility: visible;
@@ -267,6 +356,16 @@
           background-color: #fff;
           z-index: 10;
           transition: 0.3s;
+          @include mobile {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            position: static;
+            box-shadow: none;
+            width: 90%;
+            padding-left: 0;
+            padding-right: 0;
+          }
         }
 
         span {
@@ -293,6 +392,9 @@
 
     &__inner {
       padding-top: 100px;
+      @include mobile {
+        padding-top: 40px;
+      }
     }
   }
 }
@@ -302,6 +404,9 @@
 .diagnostic-portfolio {
   padding-bottom: 80px;
 overflow: hidden;
+@include mobile {
+  padding-bottom: 0px;
+}
   .section {
     &__title {
       @include desktop-medium {
@@ -311,12 +416,20 @@ overflow: hidden;
     &__top {
       display: flex;
       justify-content: flex-start;
+      @include mobile {
+        margin-top: 30px;
+      }
     }
     &__inner {
       padding-top: 100px;
       padding-left: 70px;
       padding-right: 100px;
       height: 100%;
+      @include mobile {
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
 
     &__info {
@@ -351,6 +464,9 @@ overflow: hidden;
           font-size: 14px;
           line-height: 14px;
           color: #777777;
+          @include mobile {
+            line-height: 22px;
+          }
         }
       }
     }
@@ -362,9 +478,19 @@ overflow: hidden;
 .diagnostic-detail {
   @include helveticaNeueCur-roman;
   .section {
+
+    &__inner {
+      @include mobile {
+        padding-top: 0;
+        padding-bottom: 30px;
+      }
+    }
     &__inner-wrap {
       max-width: 80%;
       position: static;
+     @include mobile {
+       max-width: 100%;
+     }
       @include desktop-medium {
         max-width: 95%;
       }
@@ -387,7 +513,12 @@ overflow: hidden;
         left: 0;
         max-width: 100%;
         padding-right: 25px;
-
+      @include mobile {
+        visibility: visible;
+        position: static;
+        opacity: 1;
+        padding-right: 0;
+      }
         &.visible {
           visibility: visible;
           opacity: 1;
@@ -398,8 +529,12 @@ overflow: hidden;
         }
 
         .section {
+    
           &__title {
             margin-bottom: 10px;
+            @include mobile {
+              display: none;
+            }
           }
 
           &__subtitle {
@@ -408,6 +543,9 @@ overflow: hidden;
             color: #222222;
             @include helveticaNeueCur-roman;
             margin-bottom: 20px;
+            @include mobile {
+              margin-bottom: 10px;
+            }
             @include desktop-medium {
               margin-bottom: 10px;
             }
@@ -416,8 +554,15 @@ overflow: hidden;
             display: flex;
             border: 1px dashed #222222;
             position: relative;
+            @include mobile {
+              border: 0;
+            }
+            @include mobile {
+              flex-direction: column;
+            }
             p {
               margin-bottom: 10px;
+    
               @include desktop-medium {
                 margin-bottom: 8px;
                 line-height: 20px;
@@ -438,8 +583,21 @@ overflow: hidden;
             }
             &-left {
               border-right: 1px dashed #222222;
+              @include mobile {
+                border-right: 0px;
+                border: 1px dashed #222222;
+                margin-bottom: 20px;
+              }
+            }
+            &-right {
+              @include mobile {
+                border: 1px dashed #222222;
+              }
             }
             .diagnostic-details-back {
+              @include mobile {
+                display: none;
+              }
               position: absolute;
               top: 100%;
               right: 0;
@@ -465,6 +623,12 @@ overflow: hidden;
     &__info {
       p {
         margin-bottom: 10px;
+        @include mobile {
+                
+          font-size: 16px;
+          line-height: 24px;
+         
+        }
       }
 
       &-action {
@@ -481,11 +645,18 @@ overflow: hidden;
         }
 
         .text {
+          @include mobile {
+            font-size: 16px;
+            line-height: 24px;
+          }
           &:after {
             content: '';
             @include sprite('diagnostic-detail-arrow-right');
             display: inline-block;
             margin-left: 15px;
+            @include mobile {
+              display: none;
+            }
           }
         }
       }

@@ -224,6 +224,9 @@ pointer-events: visible;
   font-size: 14px;
   line-height: 21px;
   color: #777777;
+  @include mobile {
+    display: none;
+  }
   @include helveticaNeueCur-roman;
   &:hover {
     text-decoration: underline;
@@ -243,4 +246,19 @@ padding: 0;
       display: inline-block;
       margin-left: 5px;
 }
+}
+
+.btn-gray {
+  display: none;
+  @include mobile {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: #777777;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 50px;
+    border: 1px solid #777777;
+    margin-top: 10px;
+  }
 }

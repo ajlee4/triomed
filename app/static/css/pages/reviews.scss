@@ -1,13 +1,20 @@
 .content {
   &.reviews {
+    @include mobile {
+      padding-top: 76px;
+    }
     .section {
       padding-bottom: 0px;
-      max-height: 100vh;
+   
       &__inner {
         overflow: hidden;
         height: 100%;
 
         padding-right: 64px;
+        @include mobile {
+          padding-right: 15px;
+          padding-bottom: 30px;
+        }
       }
       &.reviews-main {
         .section {
@@ -29,7 +36,9 @@
           }
           &__info {
             max-width: 80%;
-
+          @include mobile {
+            max-width: 100%;
+          }
             .reviews-list {
               height: auto;
               @include helveticaNeueCur-roman;
@@ -77,9 +86,14 @@
               &.videoreviews {
                 .reviews-list__item {
                   display: flex;
-
+                   @include mobile {
+                     flex-direction: column;
+                   }
                   .item__left {
                     padding-right: 10px;
+                    @include mobile {
+                      margin-bottom: 15px;
+                    }
                     img {
                       max-width: 100%;
                       width: 100%;
@@ -87,6 +101,9 @@
                   }
                   .item__right {
                     width: 60%;
+                    @include mobile {
+                      width: 100%;
+                    }
                     .item-text {
                       max-width: 450px;
                     }

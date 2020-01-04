@@ -7,10 +7,17 @@
             }
             &.contact-page-main {
              overflow: hidden;
+             @include mobile {
+                 padding-top: 76px;
+             }
                 .section {
                    
                     &__inner {
                         height: 100%;
+                        @include mobile {
+                            padding-right: 15px;
+                            padding-bottom: 30px;
+                        }
                       
                     }
                     &__title {
@@ -40,6 +47,9 @@
             position: absolute;
             right: 0;
             top: 100px;
+            @include mobile {
+                position: static;
+            }
         }
     }
 }

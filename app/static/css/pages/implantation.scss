@@ -4,6 +4,9 @@
   background: radial-gradient(113.74% 99.6% at -14.15% 0.53%, #f9f9f9 0%, #dfdfdf 100%);
 
   position: relative;
+  @include mobile {
+    padding-top: 76px;
+  }
   @include helveticaNeueCur-roman;
   &:before {
     content: '';
@@ -18,6 +21,17 @@
     background-position: top right;
     background-size: cover;
     padding-bottom: 80px;
+    @include mobile {
+      width: 100%;
+    background-position: center right;
+    background-size: contain;
+      height: 316px;
+      padding-bottom: 0;
+       top: 15%;
+      padding-left: 15px;
+      padding-right: 15px;
+ 
+    }
     @include desktop-medium {
     bottom: 65px;
     }
@@ -29,9 +43,15 @@
       background-repeat: no-repeat;
       background-size: cover;
       height: 100%;
+      @include mobile {
+        padding-bottom: 30px;
+      }
 
       &-wrap {
         max-width: 60%;
+        @include mobile {
+          max-width: 100%;
+        }
         @include desktop-medium {
           max-width: 70%;
         }
@@ -40,6 +60,12 @@
 
     &__title {
       margin-bottom: 10px;
+      @include mobile {
+        margin-bottom: 320px;
+      }
+      @include mobileS {
+        margin-bottom: 300px;
+      }
     }
 
     &__info {
@@ -60,6 +86,10 @@
       .main-btn {
         padding-top: 10px;
         padding-bottom: 10px;
+        @include mobile {
+          width: 100%;
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -73,8 +103,22 @@
     &__title {
       margin-bottom: 10px;
     }
+    &__subtitle {
+      display: none;
+      @include mobile {
+        display: block;
+        font-size: 14px;
+        line-height: 21px;
+        color: #C8102E;
+        @include helveticaNeueCur-roman;
+        margin-bottom: 20px;
+      }
+    }
     &__inner {
       padding-right: 50px;
+      @include mobile {
+        padding-right: 15px;
+      }
     }
   }
 
@@ -83,6 +127,9 @@
       list-style: none;
       margin-bottom: 50px;
       max-width: 70%;
+      @include mobile {
+        max-width: 100%;
+      }
    @include desktop-medium {
      margin-bottom: 15px;
    }
@@ -90,6 +137,10 @@
         margin-bottom: 15px;
         position: relative;
         padding-right: 50px;
+        @include mobile {
+          padding-right: 0;
+          padding-bottom: 50px;
+        }
         @include desktop-medium {
           margin-bottom: 10px;
         }
@@ -126,7 +177,15 @@
           display: flex;
           align-items: center;
           border-radius: 4px;
-
+       @include mobile {
+         visibility: visible;
+         opacity: 1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 34px;
+        top: auto;
+       }
           &:hover {
             svg {
               fill: #fff;
@@ -171,14 +230,31 @@
     padding: 15px;
     border: 1px dashed #222222;
     justify-content: space-between;
+    @include mobile {
+      flex-direction:  column;
+    }
     &__item {
       display: flex;
       align-items: center;
       position: relative;
       z-index: 99;
       cursor: pointer;
+      @include mobile {
+         
+        z-index: 10;
+        margin-bottom: 15px;
+  display: block;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
       span {
         max-width: 100px;
+        @include mobile {
+          padding-top: 0;
+          position: relative;
+          top: -15px;
+        }
       }
 
       &:hover {
@@ -207,6 +283,17 @@
         font-size: 14px;
         line-height: 21px;
         color: #777777;
+        @include mobile {
+          width: 100%;
+          visibility: visible;
+          opacity: 1;
+          position: static;
+          box-shadow: none;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 50px;
+          padding-right: 0;
+        }
       }
     }
   }
@@ -216,9 +303,17 @@
 
 .implantation-portfolio {
   .section {
+    &__title {
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
     &__inner {
       padding-right: 100px;
       height: 100%;
+      @include mobile {
+        padding-right: 15px;
+      }
     }
 
     &__info {
@@ -261,8 +356,14 @@
   .section {
     &__inner {
       overflow: hidden;
+      @include mobile {
+        padding-bottom: 30px;
+      }
       &-wrap {
         max-width: 80%;
+        @include mobile {
+          max-width: 100%;
+        }
       }
     }
     &__title {
@@ -277,6 +378,7 @@
         p {
           font-size: 14px;
           line-height: 19px;
+        
         }
       }
       b {
@@ -284,6 +386,10 @@
       }
       p {
         margin-bottom: 8px;
+        @include mobile {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
     }
   }

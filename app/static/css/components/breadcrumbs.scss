@@ -5,10 +5,26 @@
   top: 80px;
  margin-left: 64px;
  z-index: 100;
-
+@include mobile {
+  position: absolute;
+  top: 90px;
+  margin-left: 15px;
+  z-index: 1;
+}
   &__item {
     margin-right: 5px;
-
+    @include mobile {
+      display: none;
+    }
+&.mobile {
+  display: none;
+  @include mobile {
+    display: block;
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
     &:last-child {
       margin-right: 0;
 

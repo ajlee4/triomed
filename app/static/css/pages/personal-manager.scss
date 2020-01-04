@@ -1,10 +1,16 @@
 .content {
   &.personal-manager-page {
+    @include mobile {
+      padding-top: 76px;
+    }
     .section {
       &__inner {
         padding-right: 64px;
         position: relative;
         z-index: 20;
+        @include mobile {
+          padding-right: 15px;
+        }
       }
       &.personal-manager-main {
         background: linear-gradient(298.68deg, #d8d8d8 8.34%, rgba(255, 255, 255, 0.3) 91.1%);
@@ -25,13 +31,36 @@
             background-size: cover;
             padding-bottom: 80px;
             z-index: 5;
+            @include mobile {
+              width: 100%;
+            background-position: center right;
+            background-size: contain;
+              height: 316px;
+              padding-bottom: 0;
+               top: 12%;
+              padding-left: 15px;
+              padding-right: 15px;
+         
+            }
           }
         .section {
+          &__inner {
+            @include mobile {
+              padding-bottom: 30px;
+            }
+          }
           &__title {
             max-width: 60%;
             margin-bottom: 66px;
             position: relative;
             z-index: 10;
+            @include mobile {
+              margin-bottom: 330px;
+              max-width: 100%;
+            }
+            @include mobileS {
+              margin-bottom: 310px;
+            }
           }
           &__info {
             max-width: 60%;
@@ -42,6 +71,13 @@
             margin-bottom: 40px;
             position: relative;
             z-index: 10;
+            @include mobile {
+              max-width: 100%;
+              p {
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
           }
           &__action {
             .main-btn {
@@ -85,6 +121,12 @@
                   .task__col {
                       padding-left: 10px;
                       padding-right: 10px;
+                      @include mobile {
+                        margin-bottom: 20px;
+                        &:last-child {
+                          margin-bottom: 0;
+                        }
+                      }
                       @include desktop-medium {
                         padding-left: 5px;
                         padding-right: 5px;
@@ -135,6 +177,11 @@
       }
       &.personal-manager-actions{
           .section {
+            &__inner {
+              @include mobile {
+                padding-bottom: 30px;
+              }
+            }
               &__title {
                   margin-bottom: 35px;
               }

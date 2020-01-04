@@ -7,6 +7,9 @@
     }
         .section {
             overflow: hidden;
+            @include mobile {
+                padding-top: 76px;
+            }
             &__title {
                 margin-bottom: 30px;
                 @include desktop-medium {
@@ -15,6 +18,10 @@
             }
             &__inner {
                 padding-right: 64px;
+                @include mobile {
+                    padding-right: 15px;
+                    padding-bottom: 30px;
+                }
             }
             &__result {
                 @include helveticaNeueCur-roman;
@@ -27,6 +34,15 @@
                 margin-bottom: 10px;
                 padding-left: 10px;
                 padding-right: 10px;
+                @include mobile {
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+                    span {
+                        margin-top: 10px;
+                    }
+                }
             }
             &__info {
                 &-top {

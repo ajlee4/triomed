@@ -2,16 +2,30 @@
 // DOCTOR INFO
 
 .doctor-info {
+    @include mobile {
+        padding-top: 76px;
+    
+    }
     background: linear-gradient(298.68deg, #D8D8D8 8.34%, rgba(255, 255, 255, 0.3) 91.1%);
     .section {
         @include helveticaNeueCur-roman;
         &__inner {
             display: flex;
+            @include mobile {
+                display: block;
+                padding-bottom: 30px;
+                position: relative;
+            }
         }
 
         &__left {
             max-width: 60%;
             padding-right: 30px;
+            @include mobile {
+                padding-right: 0;
+                max-width: 100%;
+            }
+     
             .section {
                 &__title {
                     margin-bottom: 40px;
@@ -69,14 +83,27 @@
                      background-image: url($images_dir+'border.png');
                      background-size: cover;
                      background-repeat: no-repeat;
+
+                     @include mobile {
+                      position: absolute;
+                      bottom: 100px;
                      
+                     }
+                     @include mobileS {
+                         width: 300px;
+                         background-size: contain;
+                     }
                     .text {
                        padding: 10px;
                         width: 287px;
                         position: relative;
                         top: 15px;
                         left: 30px;
-                      
+                       @include mobileS {
+                           width: 100%;
+                           left: 15px;
+                           top: 10px;
+                       }
                         @include helveticaNeueCur-roman;
                         font-size: 16px;
                         line-height: 22px;
@@ -86,16 +113,26 @@
         }
         &__right {
             padding-right: 10px;
+            @include mobile {
+                padding-right: 0;
+            }
             .specialist-img {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 position: relative;
                 top: 50px;
+                @include mobile {
+                    top: 0;
+                }
                 img {
                 max-width: 350px;
                 margin-bottom: 20px;
                 border-radius: 4px;
+                @include mobile {
+                    max-width: 100%;
+                    margin-bottom: 150px;
+                }
                 }
             }
             .main-btn {
@@ -113,6 +150,9 @@
     .section {
         &__inner {
             padding-right: 80px;
+            @include mobile {
+                padding-right: 15px;
+            }
         }
         &__title {
             margin-bottom: 10px;
@@ -141,8 +181,15 @@
             &-bottom {
                 display: flex;
                justify-content: space-between;
+               @include mobile {
+                   flex-direction: column;
+               }
                 .bottom-left {
                  max-width: 70%;
+                 @include mobile {
+                     max-width: 100%;
+                     margin-bottom: 20px;
+                 }
                 }
                 .text {
              
@@ -157,6 +204,11 @@
                     padding-left: 80px;
                     padding-right: 80px;
                     text-align: center;
+                    @include mobile {
+                        padding-left: 0;
+                        padding-right: 0;
+                        text-align: left;
+                    }
                 }
             }
         }
@@ -176,6 +228,9 @@
         }
         &__inner {
             padding-right: 100px;
+            @include mobile {
+                padding-right: 15px;
+            }
             .slider-wrap {
                 display: flex;
                 flex-direction: column;

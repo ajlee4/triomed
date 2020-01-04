@@ -4,17 +4,23 @@
         .section {
             &__inner {
                 padding-right: 64px;
+                @include mobile {
+                    padding-right: 15px;
+                }
           
              
             }
             &.blog-list-main {
-              @include desktop-large {
-                overflow: hidden;
-              }
-              @include desktop-medium {
-                overflow: hidden;
-              }
+                @include mobile {
+                    padding-top: 76px;
+                }
+    
                 .section {
+                    &__inner {
+                        @include mobile {
+                            padding-bottom: 30px;
+                        }
+                    }
                     &__title {
                       margin-bottom: 15px;
                       @include desktop-medium {
@@ -31,6 +37,12 @@
                               &__col {
                                   padding-left: 10px;
                                   padding-right: 10px;
+                                  @include mobile {
+                                      margin-bottom: 40px;
+                                      &:last-child {
+                                          margin-bottom: 0;
+                                      }
+                                  }
                                   @include helveticaNeueCur-roman;
                                   .col {
                                       &__img {
