@@ -98,10 +98,17 @@ $(document).ready(function() {
 
   $('#about-page-sertificat-slider').slick(
     {
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }]
     },
     $('.about-page-sertificat-slider').addClass('created'),
   );

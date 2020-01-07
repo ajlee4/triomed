@@ -665,6 +665,9 @@
 //about-page-sertificat-slider
 
 .about-page-sertificat-slider {
+  @include mobile {
+    position: relative;
+  }
   .slider__inner {
     height: 300px;
   }
@@ -674,6 +677,7 @@
   &.created {
     .slider__item {
       opacity: 1;
+ 
       @include mobile {
         display: flex;
         justify-content: center;
@@ -693,12 +697,22 @@
     padding-right: 30px;
     padding-top: 50px;
     position: relative;
-    z-index: 9999;
+    z-index: 100;
     @include desktop-medium {
       padding-top: 20px;
     }
     @include mobile {
-      display: none;
+    padding-top: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    width: 100%;
+    padding-right: 0;
+    justify-content: space-between;
+    z-index: 10;
+    }
+    @include mobileS {
+      display: none !important;
     }
   }
   .prev,

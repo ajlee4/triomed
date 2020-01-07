@@ -130,7 +130,9 @@
         display: flex;
       }
       &__logo {
+       @include mobile {
         display: none;
+       }
       }
       &-mobile__action {
         display: none;
