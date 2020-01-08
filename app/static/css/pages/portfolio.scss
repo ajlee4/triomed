@@ -45,19 +45,76 @@
                 }
             }
             &__info {
-                &-top {
-                    padding: 30px 0px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-                    .result-field {
-                        margin-top: 15px;
-                        font-size: 14px;
-                        line-height: 17px;
-                        @include helveticaNeueCur-roman;
-                        color: #777777;
+              .portfolio-list {
+                  .portfolio {
+                      &-row {
+                          margin-left: -10px;
+                          margin-right: -10px;
+                         align-content: space-between;
+                      }
+                      &-col {
+                          padding-left: 10px;
+                          padding-right: 10px;
+                          margin-bottom: 40px;
+                      @include mobile {
+                          margin-bottom: 40px;
+                         
+                      }
+                          .col {
+                              &-title {
+                                font-size: 20px;
+                                line-height: 24px;
+                                color: #222222;
+                                letter-spacing: 0.01em;
+                                @include helveticaNeueCur-roman;
+                                margin-top: 5px;
+                                @include mobile {
+                                  text-align: center;
+                                }
+                              }
+                              &-img {
+                                  display: flex;
+                                
+                                    @include mobile {
+                                        flex-direction: column;
+                                        align-items: center;
+                                        
+                                    }
+                                  img {
+                                    width: 49%;
+                                    height: 145px;
+                                    @include mobile {
+                                        filter: grayscale(0%);
+                                        width: 80%;
+                                        height: 100%;
+                                    }
+                                  }
+                              }
+                          }
+                      }
+                   
+                  }
+                  &__arrow {
+                      display: flex;
+                      padding-top: 0px;
+                      justify-content: flex-end;
+                      li {
+                          cursor: pointer;
+                          &:hover {
+                              svg {
+                                  fill: #c8102e;
+                              }
+                          }
+                      }
+                      .portfolio-prev {
+                          margin-right: 30px;
+                      }
+                    @include mobile {
+                        display: none;
                     }
                 }
+              }
+               
             }
         }
     }

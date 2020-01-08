@@ -1,5 +1,8 @@
 .content {
   &.blog-single {
+    .breadcrumbs {
+      position: absolute;
+    }
     @include mobile {
       padding-top: 76px;
     }
@@ -12,12 +15,7 @@
         }
       }
       &.blog-single-main {
-        @include desktop-large {
-          overflow: hidden;
-        }
-        @include desktop-medium {
-          overflow: hidden;
-        }
+       overflow-y: auto;
         .section {
           &__title {
             margin-bottom: 25px;
@@ -49,6 +47,7 @@
             &-left {
               max-width: 70%;
               padding-right: 40px;
+             
               @include mobile {
                 max-width: 100%;
                 padding-right: 0;

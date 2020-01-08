@@ -44,9 +44,7 @@
               @include helveticaNeueCur-roman;
               &__item {
                 margin-bottom: 30px;
-                &:last-child {
-                  margin-bottom: 0;
-                }
+              
                 .item {
                   &-name {
                     font-size: 16px;

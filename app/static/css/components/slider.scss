@@ -451,12 +451,15 @@
 .portfolio-page-slider {
   width: 100%;
   overflow: hidden;
+
   .slider-item {
     opacity: 0;
   }
   &.created {
     .slider-item {
       opacity: 1;
+      padding-left: 10px;
+      padding-right: 10px;
       &.hide {
         @include mobile {
           display: none;
@@ -470,12 +473,11 @@
       margin-right: -10px;
     }
     &-col {
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-bottom: 50px;
-      
+    
+      margin-bottom: 40px;
+       max-width: 100%;
       @include mobile {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
       }
       @include desktop-medium {
         margin-bottom: 25px;
@@ -494,12 +496,13 @@
       .col-img {
         cursor: pointer;
         display: flex;
+       
         @include mobile {
           flex-direction: column;
           align-items: center;
         }
         img {
-           width: 215px;
+           width: 50%;
            height: 145px;
            @include desktop-medium {
              width: 200px;
@@ -731,65 +734,6 @@
   }
 }
 
-// BLOG-LIST-SLIDER
-
-.blog-list-slider {
-
-
-  .slider__item {
-    opacity: 0;
-  }
-  &.created {
-    .slider__item {
-      opacity: 1;
-      @include mobile {
-        margin-bottom: 40px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-      &.hide {
-       @include mobile {
-        display: none;
-       }
-      }
-      .btn-gray {
-        display: none;
-        @include mobile {
-          display: block;
-        }
-      }
-    }
-  }
-  .slider-arrow {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 30px;
-    padding-top: 30px;
-    @include desktop-medium {
-      padding-top: 20px;
-      padding-right: 0;
-    }
-    position: relative;
-    z-index: 20;
-    @include mobile {
-      display: none;
-    }
-  }
-  .prev,
-  .next {
-    fill: #222222;
-    &:hover {
-      cursor: pointer;
-      fill: #c8102e;
-    }
-  }
-
-  .prev {
-    margin-right: 20px;
-  }
-}
 
 //BLOG-SINGLE-SLIDER
 
@@ -860,7 +804,7 @@
     }
   }
   .slider-arrow {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -943,4 +887,33 @@
   @include mobile {
     z-index: 10;
   }
+}
+
+//SPECIALIST-QUALIFICATION-SLIDER
+.specialist-qualification-slider {
+ opacity: 0;
+ &.created {
+  opacity: 1;
+}
+.slider-arrow {
+  display: flex;
+  justify-content: flex-start;
+  @include mobile {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  li {
+    cursor: pointer;
+    &:hover {
+      svg {
+        fill: #c8102e;
+        
+      }
+    }
+  }
+  .prev-slider {
+    margin-right: 15px;
+    
+  }
+}
 }

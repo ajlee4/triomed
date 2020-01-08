@@ -99,15 +99,6 @@ $(document).ready(function() {
 
 });
 
-// BLOG-LIST-PAGE
 
-$('#blog-list').ready(()=>{
-  $('#blog-list-btn-wrap').on('click', function(e) {
-    e.preventDefault()
-    // var show = $(this).text() === 'Показать еще';
-    // $(this).text(show ? 'Скрыть' : 'Показать еще');
-   $('#blog-list-hide').slideDown()
-  });
-});
 
 

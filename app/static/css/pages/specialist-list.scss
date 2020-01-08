@@ -22,6 +22,112 @@
                         display: flex;
                         justify-content: flex-end;
                     }
+                    &__info-bottom {
+                        .specialist-list-block {
+                         .specialist-list {
+                             &__row {
+                                     margin-left: -10px;
+                                     margin-right: -10px;
+                             }
+                             &__col {
+                                display: flex;
+                                margin-bottom: 40px;
+                                padding-left: 10px;
+                                padding-right: 10px;
+                              
+                                a {
+                                  display: flex;
+                                  @include mobile {
+                                    flex-direction: column;
+                                    align-items: center;
+                                  }
+                                  img {
+                                    filter: grayscale(100%);
+                                  }
+                                  &:hover {
+                                    .name {
+                                      text-decoration: underline;
+                                    }
+                                    img {
+                                      filter: grayscale(0%);
+                                    }
+                                  }
+                                }
+                      
+                                .col {
+                                  &-img {
+                                    width: 48%;
+                                    @include mobile {
+                                      width: 80%;
+                                    }
+                                    img {
+                                      @include mobile {
+                                        filter: grayscale(0%);
+                                      }
+                                    }
+                                  }
+                                  &-info {
+                                    width: 48%;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    @include mobile {
+                                      width: 80%;
+                                      padding-left: 0px;
+                                    }
+                                    @include helveticaNeueCur-roman;
+                                    p {
+                                      margin-bottom: 10px;
+                                    
+                                    }
+                                    color: #222222;
+                                    .name {
+                                      font-size: 14px;
+                                      line-height: 18px;
+                                      font-weight: 550;
+                                      @include helveticaNeueCur-medium;
+                                      @include mobile {
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                      }
+                                    }
+                                    .qualification {
+                                      font-size: 12px;
+                                      line-height: 18px;
+                                      @include mobile {
+                                        font-size: 14px;
+                                       
+                                      }
+                                    }
+                                    .text {
+                                      font-size: 14px;
+                                      line-height: 18px;
+                                      
+                                    }
+                                  }
+                                }
+                              }
+                              &__arrow {
+                                display: flex;
+                                padding-top: 0px;
+                                justify-content: flex-end;
+                                li {
+                                    cursor: pointer;
+                                    &:hover {
+                                        svg {
+                                            fill: #c8102e;
+                                        }
+                                    }
+                                }
+                                .portfolio-prev {
+                                    margin-right: 30px;
+                                }
+                              @include mobile {
+                                  display: none;
+                              }
+                          }
+                         }
+                        }
+                    }
                 }
             }
         }

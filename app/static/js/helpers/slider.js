@@ -68,8 +68,10 @@ $(document).ready(function() {
 
   $('#portfolio-page-slider').slick(
     {
-      slidesToShow: 1,
+      slidesToShow: 2,
+      rows:2,
       slidesToScroll: 1,
+   
       prevArrow: $('.portfolio-prev'),
       nextArrow: $('.portfolio-next'),
       responsive: [{
@@ -81,20 +83,7 @@ $(document).ready(function() {
     $('.portfolio-page-slider').addClass('created'),
   );
 
-  $('#specialist-list-slider').slick(
-    {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      prevArrow: $('.portfolio-prev'),
-      nextArrow: $('.portfolio-next'),
-      responsive: [{
-        breakpoint: 480,
-        settings: "unslick"
-      }
-      ]
-    },
-    $('.specialist-list-slider').addClass('created'),
-  );
+
 
   $('#about-page-sertificat-slider').slick(
     {
@@ -113,40 +102,13 @@ $(document).ready(function() {
     $('.about-page-sertificat-slider').addClass('created'),
   );
 
-  $('#blog-list-slider').slick(
-    {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      prevArrow: $('.prev'),
-      nextArrow: $('.next'),
-      responsive: [{
-        breakpoint: 480,
-        settings: "unslick"
-      }
-      ]
-    },
-    $('.blog-list-slider').addClass('created'),
-  );
 
-  $('#blog-single-slider').slick(
-    {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite:false,
-      prevArrow: $('.prev'),
-      nextArrow: $('.next'),
-      responsive: [{
-        breakpoint: 480,
-        settings: "unslick"
-      }
-      ]
-    },
-    $('.blog-single-slider').addClass('created'),
-  );
+
 
   $('#reviews-list-slider').slick(
     {
       slidesToShow: 1,
+      rows:2,
       slidesToScroll: 1,
       prevArrow: $('.prev'),
       nextArrow: $('.next'),
@@ -162,6 +124,7 @@ $(document).ready(function() {
   $('#videoreviews-list-slider').slick(
     {
       slidesToShow: 1,
+      rows:2,
       slidesToScroll: 1,
       prevArrow: $('.prev-video-slider'),
       nextArrow: $('.next-video-slider'),
@@ -174,3 +137,16 @@ $(document).ready(function() {
     $('.videoreviews-list-slider').addClass('created'),
   );
 });
+
+$('#specialist-qualification-slider').slick(
+  {
+    slidesToShow: 1,
+    rows:5,
+    slidesToScroll: 1,
+    prevArrow: $('.prev-slider'),
+    nextArrow: $('.next-slider'),
+
+  },
+  $('.specialist-qualification-slider').addClass('created'),
+);
+
