@@ -49,6 +49,9 @@
                                           margin-bottom: 10px;
                                           cursor: pointer;
                                           img {
+                                              @include mobile {
+                                                  filter: grayscale(0%);
+                                              }
                                               max-width: 100%;
                                               width: 100%;
                                           }

@@ -16,6 +16,7 @@
   @include mobile {
     width: 100%;
     height: 76px;
+    z-index: 9999;
   }
 &-mobile-social {
   display: none;
@@ -105,6 +106,7 @@
       align-items: center;
       padding: 20px 15px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
     }
   }
 
@@ -117,10 +119,19 @@
   }
 
   &-open {
+
     .header {
       &__inner {
         position: relative;
         z-index: 9999;
+        @include mobile {
+          
+          min-height: 100vh;
+          overflow-y: auto;
+          background-color: #fff;
+         
+        }
+     
       }
       &-right {
         position: static;
@@ -128,6 +139,18 @@
         opacity: 1;
         transition: 0.3s;
         display: flex;
+        @include mobile {
+         
+          margin-top: 76px;
+        
+         height: calc(100vh + 50px); ;
+         
+        }
+        @include mobileS {
+          min-height: 100vh;
+          padding-bottom: 50px;
+        
+        }
       }
       &__logo {
        @include mobile {
@@ -158,8 +181,7 @@
     transition: all 0.3s ease-out;
     @include mobile {
       width: 100%;
-      height: 100vh;
-      padding-top: 76px;
+ 
     }
   }
 

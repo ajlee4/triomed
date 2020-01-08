@@ -49,6 +49,8 @@
           content: '';
           @include sprite('select-arrow');
           right: 20px;
+         top: 50%;
+         margin-top: -4px;
           transition: all .4s ease-in-out;
         }
         .custom-select.opened .custom-select-trigger:after {
