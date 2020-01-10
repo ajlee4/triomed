@@ -150,13 +150,7 @@
       position: relative;
       padding-left: 30px;
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: 0;
-        @include sprite('arrow-down');
-      }
+    
     }
 
     color: #777777;

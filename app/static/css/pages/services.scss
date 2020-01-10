@@ -19,7 +19,7 @@
           }
           .services {
               &__col {
-                  padding-left: 50px;
+               
                   @include mobile {
                       margin-bottom: 20px;
                       &:last-child {
@@ -34,6 +34,7 @@
                       font-size: 20px;
                       line-height: 24px;
                       letter-spacing: 0.01em;
+                      padding-left: 50px;
                       color: #222222;
                       @include helveticaNeueCur-medium;
                       position: relative;
@@ -48,8 +49,9 @@
                           }
                          svg {
                             position: absolute;
+                            
                             top: -5px;
-                            right: 100%;
+                            left: 0;
                             margin-right: 10px;
                          
                             display: inline-block;
@@ -60,8 +62,9 @@
                          }
                   }
                   &-info {
-                    
-                      p {
+                    padding-left: 50px;
+                      a {
+                        display: block;
                           font-size: 13px;
                           line-height: 17px;
                           color: #000000;
@@ -73,6 +76,10 @@
                           &:last-child {
                               margin-bottom: 0;
                           }
+                      }
+                      .subtext {
+                          padding-left: 10px;
+                          color: #777777;
                       }
                   }
               }

@@ -404,7 +404,7 @@
     margin-bottom: 30px;
   }
 
-  z-index: 9999;
+  z-index: 1000;
   @include mobile {
     position: static;
     z-index: 5;
@@ -914,6 +914,82 @@
   .prev-slider {
     margin-right: 15px;
     
+  }
+}
+}
+
+
+// SERVICES LIST SLIDER
+.services__list-slider{
+opacity: 0;
+&.created {
+  opacity: 1;
+
+}
+.slider__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+height: 150px;
+@include mobile {
+  height: 100%;
+}
+}
+
+.slick-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+.slider-arrow {
+  display: flex;
+  padding-top: 10px;
+  @include mobile {
+    display: none !important;
+  }
+ .prev {
+   margin-right: 30px; 
+ }
+  .prev,
+  .next {
+    fill: #222222;
+    &:hover {
+      fill: #c8102e;
+      cursor: pointer;
+    }
+  }
+}
+}
+
+//price-list-slider
+
+.price-list-slider {
+  opacity: 0;
+&.created {
+  opacity: 1;
+
+}
+.slider__item {
+  margin-bottom: 10px;
+  
+}
+.slider-arrow {
+  display: flex;
+  padding-top: 10px;
+  @include mobile {
+    display: none !important;
+  }
+ .prev-arrow {
+   margin-right: 30px; 
+ }
+  .prev-arrow,
+  .next-arrow {
+    fill: #222222;
+    &:hover {
+      fill: #c8102e;
+      cursor: pointer;
+    }
   }
 }
 }

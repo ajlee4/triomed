@@ -88,17 +88,15 @@ $(document).ready(function() {
     $('.reviews-form').addClass('visible');
 
     $('.tabs-content').hide();
-   
   });
 
-  $('.back-reviews').on('click', function() {
+  $('.back-reviews').on('click', function(e) {
+    e.preventDefault();
     $('.reviews-form').removeClass('visible');
 
     $('.tabs-content').show();
   });
-
+  $('#feedback-form-button').on('click', function(e) {
+    e.preventDefault();
+  });
 });
-
-
-
-

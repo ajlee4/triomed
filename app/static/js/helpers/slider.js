@@ -136,17 +136,53 @@ $(document).ready(function() {
     },
     $('.videoreviews-list-slider').addClass('created'),
   );
+
+  $('#specialist-qualification-slider').slick(
+    {
+      slidesToShow: 1,
+      rows:5,
+      slidesToScroll: 1,
+      prevArrow: $('.prev-slider'),
+      nextArrow: $('.next-slider'),
+  
+    },
+    $('.specialist-qualification-slider').addClass('created'),
+  );
+
+
+  $('#services__list-slider').slick(
+    {
+      slidesToShow: 2,
+      rows:2,
+      slidesToScroll: 2,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
+    },
+    $('.services__list-slider').addClass('created'),
+  );
+  $('#price-list-slider').slick(
+    {
+      slidesToShow: 1,
+      rows:2,
+      slidesToScroll: 1,
+      prevArrow: $('.prev-arrow'),
+      nextArrow: $('.next-arrow'),
+      responsive: [{
+        breakpoint: 480,
+        settings: "unslick"
+      }
+      ]
+    },
+    $('.price-list-slider').addClass('created'),
+  );
+
 });
 
-$('#specialist-qualification-slider').slick(
-  {
-    slidesToShow: 1,
-    rows:5,
-    slidesToScroll: 1,
-    prevArrow: $('.prev-slider'),
-    nextArrow: $('.next-slider'),
 
-  },
-  $('.specialist-qualification-slider').addClass('created'),
-);
+
 
